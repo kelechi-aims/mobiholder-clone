@@ -1,0 +1,102 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { GoArrowUpRight } from "react-icons/go";
+import { blogs } from '../../../data';
+
+const News = () => {
+  return (
+    <div className='flex justify-center py-[70px] bg-[#020d11] z-10'>
+        <div className="container mx-auto px-8 xl:px-0 xll:px-8 2xl:px-0">
+            <div className='flex flex-wrap items-center  w-full justify-between xll:pr-[50px]'>
+                <div className='w-[50%] md:w-[70%] lg:w-1/2'>
+                    <h2 className={`font-grifter font-bold bg-clip-text text-transparent bg-news-text text-[40px] leading-[60px]
+                        md:text-[50px] md:leading-[60px]
+                        lg:-text-[60] lg:leading-[80px]
+                        xll:text-[70px] xll:leading-[114.84px] 
+                        mb-[10px]
+                    `}>Stay In the Loop</h2>
+                    <p className={`font-inter font-medium text-white text-[16px] leading-[25px]
+                        md:text-[18px] md:leading-[30px]
+                        xll:text-[22px] xll:leading-[49px]
+                        mb-[30px]
+                    `}>Never miss an update! Subscribe for the latest news, tips, and insights.</p>
+                </div>
+
+                <div>
+                    <form action="" className='bg-[#f9f7f3] rounded-[17px] py-[5px] px-[5px] flex justify-between'>
+                        <input type="email" 
+                            placeholder='Your email address'
+                            className={`font-inter font-medium text-[#a3a2a2] focus:outline-none focus:ring-2 focus:ring-blue-50 text-[16px] leading-[25px]
+                                lg:text-[18px] lg:leading-[30px]
+                                xll:text-[22px] xll:leading-[49px]
+                                pl-[20px] xll:pl-[30px] w-[60%]
+                            `}
+                        />
+                        <button
+                            type='submit'
+                            className={`bg-[#205dcb] py-[6px] xll:py-[10px] px-[23px] xll:px-[42px] text-white font-inter font-medium rounded-[17px] border text-[14px] leading-[25px]
+                                md:text-[18px] md:leading-[30px]
+                                xll:text-[22px] xll:leading-[49px] 
+                            `}
+                        >Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div className='flex flex-col max-h-[506px] overflow-y-auto scrollbar-thin scrollbar-track-[#031616] scrollbar-thumb-[#111b1f] scrollbar-thumb-rounded-[28px] scrollbar-track-rounded-[28px] gap-[60px] xl:gap-[85px] mt-[29px] mb-[69px] relative'>
+                {blogs.map((blog, index) => (
+                    <div key={index} className='flex gap-[60px] xl:gap-[85px]'>
+                        <img src={blog.img} alt={blog.alt} className='max-w-[700px] max-h-[350px] w-1/2 h-auto rounded-[11px] sticky mt-[178px] top-[178px]' />
+
+                        <div className='pr-[69px] w-1/2'> 
+                            {blog.tags.map((tag, index) => (
+                                <div key={index} className='flex gap-[20px] flex-wrap '>
+                                    <button className='border-[0.6px] rounded-[100px] bg-news-bdr bg-clip-border border-transparent '><div className='font-inter font-medium text-[12px] leading-[30px] lg:text-[18px] lg:leading-[49px] text-white bg-[#031616] py-[6px] px-[43px] rounded-[100px] '>{tag}</div></button>
+                                </div>
+                            ))}
+                            
+
+                            <div>
+                                <h2 className='font-inter font-medium text-[25px] leading-[35px] lg:text-[45px] lg:leading-[71px] text-white mt-[15px]'>{blog.title}</h2>
+                                <p className='font-inter font-medium text-[16px] leading-[30px] lg:text-[22px] lg:leading-[49px] text-white mt-[14px]'>{blog.desc}</p>
+
+                                <Link className='underline'><span className='font-inter text-left font-normal text-[16px] leading-[30px] lg:text-[22px] lg:leading-[49px] text-white flex items-center gap-[10px]'>See full case study <GoArrowUpRight /></span></Link>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                ))}               
+            </div>
+            
+            <hr className='mr-[70px] border-[#1e3737] '/>
+
+           <div className='pt-[50px]'>
+             <h2 className={`font-grifter font-bold  bg-clip-text text-transparent bg-news-text text-[40px] leading-[60px]
+                md:text-[50px] md:leading-[60px]
+                lg:-text-[60] lg:leading-[80px]
+                xll:text-[70px] xll:leading-[114.84px] 
+            `}>Trusted by Top Brands</h2>  
+             <p className={`font-inter font-medium text-white text-[16px] leading-[25px]
+                md:text-[18px] md:leading-[30px]
+                xll:text-[22px] xll:leading-[49px]
+            `}>We take pride in being the go-to solution for some of the world’s top brands.</p>
+             
+             <div className='flex justify-between mt-[30px] items-center relative'>
+                <img src="/images/news-logo1.png" alt="news-logo1" className='relative max-h-[25px] max-w-[100px] xl:max-h-[40px] xl:max-w-[220px] w-1/3 h-auto'/>
+                <div className='top-0 left-0 h-full w-[101px] xl:w-[220px] bg-news-logo absolute'></div>
+                
+                <img src="/images/news-logo2.png" alt="news-logo2" className='max-h-[25px] max-w-[60px] xl:max-h-[40px] xl:max-w-[100px] w-1/3 h-auto'/>
+                <img src="/images/news-logo3.png" alt="news-logo3" className='max-h-[25px] max-w-[128px] xl:max-h-[40px] xl:max-w-[176px] w-1/3 h-auto'/>
+                <img src="/images/news-logo4.png" alt="news-logo4" className='max-h-[25px] max-w-[85px] xl:max-h-[40px] xl:max-w-[169px] w-1/3 h-auto'/>
+                <img src="/images/news-logo5.png" alt="news-logo5" className='max-h-[25px] max-w-[101px] xl:max-h-[40px] xl:max-w-[202px] w-1/3 h-auto'/>
+                <div className='py-[30px] bg-news-logo2 h-full w-[101px] xl:w-[220px] absolute top-0 right-0 '></div>
+             </div> 
+           </div> 
+        </div>
+    </div>
+  )
+}
+
+export default News
