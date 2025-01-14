@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Features = () => {
   return (
     <div className='flex justify-center bg-[#020d11] pt-[80px] mt-[95px] '>
-        <div className='container mx-auto px-8 xl:px-0 xll:px-8 2xl:px-0 z-10'>
+        <div className='container mx-auto px-8 xll:px-8 2xl:px-0 z-10'>
            
             <div className='relative'>
                 <img src="/images/ellipse.png" alt="ellipse" className='max-w-[] relative '/>
@@ -17,7 +17,7 @@ const Features = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col justify-center items-center gap-[60px] mb-[120px]'>
+            <div className='flex flex-col justify-center items-center gap-[60px] mb-[120px] px-0 xl:px-[135px] xll:px-0'>
                 <div className='flex justify-between items-center flex-wrap gap-8'>
                     <div className={`px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent 
                         bg-gradient-to-br-feat-card-bdr inline-flex flex-col justify-center gap-[23px] py-[50px]

@@ -9,9 +9,10 @@ const About = () => {
     setSelectedAbout(aboutId);
   }
   return (
-    <div className='flex justify-center'>
-        <div className="container mx-auto px-8 mt-[66px] md:mt-[76px] lg:mt-[100px] xl:px-0 xll:px-8 2xl:px-0 relative flex xl:mt-[133px]">
-          <img src="/images/about-bg.gif" alt="about-gif" className={`absolute max-w-[489px] max-h-[489px] w-[100%] h-[100%] top-[600px] lg:top-[932px] left-[-217px]`} />
+    <div className='flex justify-center relative overflow-hidden'>
+            <img src="/images/about-bg.gif" alt="about-gif" className={`absolute max-w-[489px] max-h-[489px] w-[100%] h-[100%] top-[40%] left-0 transform translate-x-[-20%]`} />
+
+        <div className="container mx-auto px-8 mt-[66px] md:mt-[76px] lg:mt-[100px] xll:px-8 2xl:px-0 flex xl:mt-[133px] relative">
 
           <div className='bg-[#060e16] rounded-[50px] px-[40px] md:px-[60px] xl:px-[80px] shadow-about-sh z-10'>
 

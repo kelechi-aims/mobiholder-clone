@@ -3,9 +3,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const CallToAction = () => {
   return (
-    <div className='relative'>
+    <div className=''>
         <div className='border border-[#101223] border-solid bg-[url("/images/calltoactionbg.gif")] bg-cover flex flex-col justify-center] py-[190px]'>
-            <div className="container mx-auto px-8 xl:px-0 xll:px-8 2xl:px-0">
+            <div className="container mx-auto px-8 xll:px-8 2xl:px-0">
                 <div className='w-[70%] lg:w-[60%]'>
                     <h1 className={`font-grifter font-bold bg-clip-text text-transparent bg-cta-text text-[40px] leading-[60px]
                         md:text-[50px] md:leading-[70px]
@@ -21,8 +21,12 @@ const CallToAction = () => {
             </div>
         </div>
 
-        <div className='flex justify-center py-[190px] relative z-10'>
-            <div className="container mx-auto px-8 xl:px-0 xll:px-8 2xl:px-0 flex flex-col lg:flex-row gap-[40px]">
+        <div className='flex justify-center py-[190px] relative z-10 overflow-hidden'>
+            {/* Rotating backdround gif */}
+            <img src="/images/about-bg.gif" alt="about-gif" className={`absolute top-[85%] lg:top-[69%] right-0 transform translate-x-[60%] -z-10`} />
+
+            <div className="container mx-auto px-8 xll:px-8 2xl:px-0 flex flex-col lg:flex-row gap-[40px]">
+                
                 <img src="/images/cta-img1.png" alt="cta-img1" className='w-full max-h-[70%] lg:w-2/5 lg:max-h-[100%] h-auto place-items-center'/>
                 <div className='flex flex-col lg:w-[55%] items-center'>
                     <h2 className={`font-grifter font-bold text-[#061f25] text-[40px] leading-[60px]
@@ -56,8 +60,8 @@ const CallToAction = () => {
             </div>
 
 
+
         </div>
-        <img src="/images/about-bg.gif" alt="about-gif" className={`absolute w-[100%] max-w-[800px] h-[100%] max-h-[800px] top-[81%] md:top-[85%] lg:top-[80%] xl:top-[80%] xll:top-[77%] 2xl:top-[78%] 2xl:left-[70%] overflow-hidden xll:left-[75%]  lg:left-[80%] md:left-[50%] left-[60%] -z-10`} />
 
     </div>
   )
