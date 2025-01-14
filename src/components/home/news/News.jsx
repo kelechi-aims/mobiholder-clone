@@ -7,7 +7,7 @@ const News = () => {
   return (
     <div className='flex justify-center py-[70px] bg-[#020d11] z-10'>
         <div className="container mx-auto px-8 xl:px-0 xll:px-8 2xl:px-0">
-            <div className='flex flex-wrap items-center  w-full justify-between xll:pr-[50px]'>
+            <div className='flex flex-col lg:flex-row items-center  w-full justify-between xll:pr-[50px]'>
                 <div className='w-[50%] md:w-[70%] lg:w-1/2'>
                     <h2 className={`font-grifter font-bold bg-clip-text text-transparent bg-news-text text-[40px] leading-[60px]
                         md:text-[50px] md:leading-[60px]
@@ -45,19 +45,23 @@ const News = () => {
 
             <div className='flex flex-col max-h-[506px] overflow-y-auto scrollbar-thin scrollbar-track-[#031616] scrollbar-thumb-[#111b1f] scrollbar-thumb-rounded-[28px] scrollbar-track-rounded-[28px] gap-[60px] xl:gap-[85px] mt-[29px] mb-[69px] relative'>
                 {blogs.map((blog, index) => (
-                    <div key={index} className='flex gap-[60px] xl:gap-[85px]'>
-                        <img src={blog.img} alt={blog.alt} className='max-w-[700px] max-h-[350px] w-1/2 h-auto rounded-[11px] sticky mt-[178px] top-[178px]' />
+                    <div key={index} className='flex flex-col px-10  items-center md:flex-col xl:flex-row gap-[60px] xl:gap-[85px]'>
+                        <img src={blog.img} alt={blog.alt} className='w-full mt-10 xl:max-w-[700px] xl:max-h-[350px] xl:w-1/2 h-auto rounded-[11px] xl:sticky xl:mt-[178px] xl:top-[178px]' />
 
-                        <div className='pr-[69px] w-1/2'> 
+                        <div className='xl:pr-[69px] xl:w-1/2'> 
+                            <div  className='flex flex-wrap gap-5'>
                             {blog.tags.map((tag, index) => (
-                                <div key={index} className='flex gap-[20px] flex-wrap '>
-                                    <button className='border-[0.6px] rounded-[100px] bg-news-bdr bg-clip-border border-transparent '><div className='font-inter font-medium text-[12px] leading-[30px] lg:text-[18px] lg:leading-[49px] text-white bg-[#031616] py-[6px] px-[43px] rounded-[100px] '>{tag}</div></button>
-                                </div>
+                                <button key={index} className='border-[0.6px] rounded-[100px] bg-news-bdr bg-clip-border border-transparent '>
+                                    <div className='font-inter font-medium text-[12px] leading-[30px] lg:text-[18px] lg:leading-[49px] text-white bg-[#031616] py-[6px] px-[43px] rounded-[100px] '>
+                                        {tag}
+                                    </div>
+                                </button>                
                             ))}
+                            </div>
                             
 
                             <div>
-                                <h2 className='font-inter font-medium text-[25px] leading-[35px] lg:text-[45px] lg:leading-[71px] text-white mt-[15px]'>{blog.title}</h2>
+                                <h2 className='font-inter font-medium text-[25px] leading-[35px] lg:text-[45px] lg:leading-[71px] text-white mt-9 lg:mt-[15px]'>{blog.title}</h2>
                                 <p className='font-inter font-medium text-[16px] leading-[30px] lg:text-[22px] lg:leading-[49px] text-white mt-[14px]'>{blog.desc}</p>
 
                                 <Link className='underline'><span className='font-inter text-left font-normal text-[16px] leading-[30px] lg:text-[22px] lg:leading-[49px] text-white flex items-center gap-[10px]'>See full case study <GoArrowUpRight /></span></Link>

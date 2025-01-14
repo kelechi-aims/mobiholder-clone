@@ -163,4 +163,25 @@ export const blogs = [
         alt: "blog4"
 
     },
+];
+
+export const pricing = [
+    {
+        name: "Basic",
+        desc: "Best for personal use.",
+        price: "Free",
+        features: ["Access to Membership", "Access to Events", "Access to Verification", "Add 10 IDs", "Communication tools", "Reporting and Analytics"]
+    },
+    {
+        name: "Enterprise",
+        desc: "For small teams & corporations.",
+        price: "20,000 ",
+        features: ["Access to Membership", "Access to Events", "Access to Verification", "Add 10 IDs", "Communication tools", "Reporting and Analytics"]
+    },
+    {
+        name: "Business",
+        desc: "Best for big institution.",
+        price: "60,000",
+        features: ["Access to Membership", "Access to Events", "Access to Verification", "Add 10 IDs", "Communication tools", "Reporting and Analytics"]
+    },
 ]

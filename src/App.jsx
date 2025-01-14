@@ -7,6 +7,9 @@ import {
   RouterProvider,
   Outlet
 } from "react-router-dom";
+import Pricing from './pages/pricing/Pricing';
+import FqasPage from './pages/fqas/FqasPage';
+import ContactUs from './pages/contactus/ContactUs';
 
 const App = () => {
   const Layout = () => {
@@ -26,6 +29,18 @@ const App = () => {
         {
           path: "/",
           element: <Home />
+        },
+        {
+          path: "/pricing",
+          element: <Pricing />
+        },
+        {
+          path: "/fqas",
+          element: <FqasPage />
+        },
+        {
+          path: "/contactus",
+          element: <ContactUs />
         }
       ]
     }

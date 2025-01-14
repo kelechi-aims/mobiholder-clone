@@ -3,8 +3,9 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='bg-[url("/images/footer-bg.gif")] bg-cover flex justify-center py-[80px]'>
-      <div className="container mx-auto px-8 md:px-0 lg:px-8 xll:px-8 2xl:px-0 flex flex-wrap gap-[20px] justify-between w-full">
+      <div className="container mx-auto px-8 md:px-0 lg:px-8 xll:px-8 2xl:px-0 ">
         
+      <div className='flex flex-wrap gap-[20px] justify-between w-full'>
       <div className='max-w-[500px]'>
         <img src="/images/logo.png" alt="logo" className='mb-[20px]'/>
         <p className='font-inter font-medium text-[18px] leading-[49px] text-white'>More than just being a digital version of your wallet, MobiHolder is poised to bridge the identification gap in Africa</p>
@@ -70,8 +71,12 @@ const Footer = () => {
             <li className='font-inter font-medium text-[18px] leading-[49px] text-white'>support@mobiholder.com</li>
           </ul>
         </div>
+      </div>
 
-        
+        <div className='mt-20 flex justify-center items-center'>
+          <span className='font-mulish text-lg lg:text-xl 2xl:text-2xl tracking-[-0.04rem] text-center text-[#9a9999] mr-3'>© 2024, Mobiholder. All rights reserved</span>
+          <span className='font-inter text-xs lg:text-sm 2xl:text-base text-right text-[#ffffff] leading-[49px] pt-1'>Manage Policy | Cookie Policy | Privacy Policy</span>
+        </div>        
 
       </div>
     </div>

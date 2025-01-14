@@ -22,10 +22,10 @@ const CallToAction = () => {
         </div>
 
         <div className='flex justify-center py-[190px] relative z-10'>
-            <div className="container mx-auto px-8 xl:px-0 xll:px-8 2xl:px-0 flex flex-wrap gap-[40px]">
-                <img src="/images/cta-img1.png" alt="cta-img1" className='w-2/5 md:w-1/2 lg:w-2/5 h-auto place-items-center'/>
-                <div className='flex flex-col w-[55%] md:w-[67%] lg:w-[55%] '>
-                    <h2 className={`font-grifter font-bold text-[#061f25] text-[40px] leading-[60px
+            <div className="container mx-auto px-8 xl:px-0 xll:px-8 2xl:px-0 flex flex-col lg:flex-row gap-[40px]">
+                <img src="/images/cta-img1.png" alt="cta-img1" className='w-full max-h-[70%] lg:w-2/5 lg:max-h-[100%] h-auto place-items-center'/>
+                <div className='flex flex-col lg:w-[55%] items-center'>
+                    <h2 className={`font-grifter font-bold text-[#061f25] text-[40px] leading-[60px]
                         lg:text-[50px] lg:leading-[70px]
                         xl:text-[70px] xl:leading-[95px]
                         xll:text-[70px] xll:leading-[114.84px]
