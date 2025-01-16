@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
 import { FaArrowRightLong } from "react-icons/fa6";
-import Navbar from '../../navbar/Navbar';
+
 
 const Header = () => {
   return (
-    <div className='bg-[url("/images/home-hero.gif")] bg-cover flex flex-col justify-center'>
-      <Navbar />
+    <div>
+      <div className='bg-[url("/images/home-hero.gif")] bg-cover flex flex-col justify-center'>
+      
       <div className='container mx-auto px-8 md:px-0 lg:px-8 xll:px-8 2xl:px-0'>
-        <div className='flex gap-[72px] xl:gap-[78.76px] items-center   mt-[80px] mb-[15px] xl:mt-[164.29px] xl:mb-[37.65px] md:mb-[25px]'>
+        <div className='flex gap-[72px] xl:gap-[78.76px] items-center   mt-[158px] mb-[15px] xl:mt-[242.29px] xl:mb-[37.65px] md:mb-[25px]'>
           <div className='flex gap-0 items-center relative'>
             <img src="/images/kacey.jpg" alt="trustedby" className='w-[30px] h-[30px] xl:w-[41.22px] xl:h-[41.22px] border-[2.17px] border-solid border-[#01090D] rounded-full '/>
             <img src="/images/kacey.jpg" alt="trustedby" className='w-[30px] h-[30px] xl:w-[41.22px] xl:h-[41.22px] border-[2.17px] border-solid border-[#01090D] rounded-full absolute left-[23.14px]'/>
@@ -33,6 +34,9 @@ const Header = () => {
           </button>
         </Link>
       </div>
+
+    </div>
+
     </div>
   )
 }

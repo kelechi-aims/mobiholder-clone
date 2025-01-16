@@ -10,11 +10,15 @@ import {
 import Pricing from './pages/pricing/Pricing';
 import FqasPage from './pages/fqas/FqasPage';
 import ContactUs from './pages/contactus/ContactUs';
+import Navbar from './components/navbar/Navbar';
 
 const App = () => {
   const Layout = () => {
     return (
-      <div>
+      <div className='relative'>
+        <div className='z-50 absolute w-full'>
+          <Navbar/>
+        </div>
         <Outlet />
         <Footer />
       </div>

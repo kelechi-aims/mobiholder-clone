@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
+import { featuresData } from '../../../data';
 
 const Features = () => {
   return (
@@ -17,63 +18,59 @@ const Features = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col justify-center items-center gap-[60px] mb-[120px] px-0 xl:px-[135px] xll:px-0'>
-                <div className='flex justify-between items-center flex-wrap gap-8'>
-                    <div className={`px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent 
-                        bg-gradient-to-br-feat-card-bdr inline-flex flex-col justify-center gap-[23px] py-[50px]
-                        md:max-w-[325px] lg:max-w-[290px]
-                        max-w-[433px] w-full max-h-[490px] h-full
-                        xll:max-w-[410px]
-                        2xl:max-w-[473px]
+            <div className='flex flex-col justify-center items-center gap-[60px] mb-[120px] px-0 xll:px-0'>
+                <div className='flex justify-between items-center flex-col w-full lg:flex-row lg:flex-wrap gap-16 lg:gap-8'>
+                    {featuresData.map((feature) => (
+                        <div 
+                            key={feature.id} 
+                            className={`px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent 
+                                bg-gradient-to-br-feat-card-bdr inline-flex flex-col justify-center gap-[23px] py-[50px] w-full h-[636px]
+                                lg:w-[290px] lg:h-[490px]
+                                xl:w-[350px] xl:h-[490px]
+                                xll:w-[410px]
+                                2xl:w-[473px]    
+                            `}
+                        >
+                            <h6 className='font-rubik font-medium text-3xl tracking-[-1px] text-[#cad1e9] text-left '>
+                                {feature.title}
+                            </h6>
+                            <p className='font-roboto font-normal text-base text-[#afb3ca] text-left'>
+                                {feature.description}
+                            </p>
+                            <img src={feature.image} alt={`feature-${feature.id}`} className=' w-full h-auto'/>
+                        </div>
 
-                    `}>
-                        <h6 className='font-rubik font-medium text-3xl tracking-[-1px] text-[#cad1e9] text-left '>Easy Sign Up</h6>
-                        <p className='font-roboto font-normal text-base text-[#afb3ca] text-left'>Choose a user type and get started in seconds <br />with our simple and user-friendly sign-up <br />process.  Start exploring without any hassle!</p>
-                        <img src="/images/feature-img1.png" alt="feature-img1" className=' w-full h-auto'/>
-                    </div>
-                    <div className={`px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent 
-                        border-feat-card-bdr flex flex-col justify-center gap-[23px] py-[50px]
-                        md:max-w-[325px] lg:max-w-[290px]
-                        max-w-[433px] w-full max-h-[490px] h-full
-                        xll:max-w-[410px]
-                        2xl:max-w-[473px]
-                    `}>
-                        <h6 className='font-rubik font-medium text-3xl tracking-[-1px] text-[#cad1e9] text-left '>Never lose your IDs </h6>
-                        <p className='font-roboto font-normal text-base text-[#afb3ca] text-left'>Keep all your important IDs safe and accessible in one secure place. Our platform allows you to store, organize, and retrieve your IDs effortlessly, so you’re never scrambling to find them when you need them most.</p>
-                        <img src="/images/feature-img2.png" alt="feature-img3" className='w-full h-auto'/>
-                    </div>
-                    <div className={`px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent 
-                        border-feat-card-bdr flex flex-col justify-center gap-[23px] py-[50px]
-                        md:max-w-[325px] lg:max-w-[290px]
-                        max-w-[433px] w-full max-h-[490px] h-full
-                        xll:max-w-[410px]
-                        2xl:max-w-[473px]
-                    `}>
-                        <h6 className='font-rubik font-medium text-3xl tracking-[-1px] text-[#cad1e9] text-left '>24/7 Customer Support</h6>
-                        <p className='font-roboto font-normal text-base text-[#afb3ca] text-left'>You’ll receive regular reports on your privacy status and any outstanding threats. If new records become associated with you, we will send you an alert.</p>
-                        <img src="/images/feature-img3.png" alt="feature-img3" className='w-full h-auto '/>
-                    </div>
+                    ))}
                 </div>
 
-                <div className='flex flex-wrap justify-between gap-8'>
+                <div className='flex flex-wrap justify-between gap-16 xl:gap-8 w-full'>
                     <div className={`px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent
-                        border-feat-card-bdr flex justify-center items-center gap-[23px] py-[50px] 
-                        max-w-[1050px] w-full h-full
-                        xll:max-w-[900px]
-                        2xl:max-w-[1050px]
+                        border-feat-card-bdr flex flex-col lg:flex-row justify-around lg:justify-center lg:items-center gap-[23px] lg:py-[50px] 
+                        w-full h-[636px]
+                        lg:w-[950px] lg:h-full
+                        xl:w-[780px] xl:h-full
+                        xll:w-[900px]
+                        2xl:w-[1000px]
                     `}>
-                        <div className='w-4/6'>
+                        <div className='lg:w-4/6'>
                             <h6 className='font-rubik font-medium text-3xl tracking-[-1px] text-[#cad1e9] text-left mb-[10px] '>Revenue from Subscriptions module</h6>
                             <p className='font-roboto font-normal text-base text-[#afb3ca] text-left'>Unlock a steady revenue stream by offering subscription-based access to your organisation. Our platform's subscription module allows you to create flexible plans that cater to different user needs, offering options like monthly, quarterly, or annual subscriptions.</p>
                         </div>
-                        <img src="/images/feature-img4.png" alt="feature-img4" className='w-2/5 h-auto'/>
+                        <img src="/images/feature-img4.png" alt="feature-img4" className='lg:w-2/5 h-auto'/>
                     </div>
-                    <div className={`max-h-max px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent
-                         border-feat-card-bdr flex flex-col justify-center gap-[23px] py-[19px] xll:py-[28px] 2xl:py-[19px]
+
+                    <div className={`max-h-max px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent border-feat-card-bdr 
+                        flex flex-row w-full justify-between 
+                        xl:flex-col xl:justify-center xl:w-[350px]
+                        xll:w-[410px] 2xl:w-[470px]
+                        gap-[23px] py-[51px] xll:py-[40px] 2xl:py-[28px]
                     `}>
-                        <h6 className='font-rubik font-medium text-3xl tracking-[-1px] text-[#cad1e9] text-left '>Join Us Today </h6>
-                        <p className='font-roboto font-normal text-[base text-[#afb3ca] max-w-[331px] text-left'>Enjoy these benefits as you become a Mobiholder user today </p>
-                        <button className='px-[30px] py-[21px] bg-purple border border-purple rounded-[100px] flex justify-center items-center'><span className='text-white font-grifter font-bold text-[20px] leading-[49px] flex justify-center items-center gap-[10px]'>Get Started <FaArrowRightLong /></span> </button>
+                        <div className=''>
+                            <h6 className='font-rubik font-medium text-3xl tracking-[-1px] text-[#cad1e9] text-left '>Join Us Today </h6>
+                            <p className='font-roboto font-normal text-[base text-[#afb3ca] max-w-[331px] text-left'>Enjoy these benefits as you become a Mobiholder user today </p>
+                        </div>
+                        <button className='px-[30px] py-[21px] bg-purple border w-[300px] border-purple rounded-[100px] flex justify-center items-center'><span className='text-white font-grifter font-bold text-[20px] leading-[49px] flex justify-center items-center gap-[10px]'>Get Started <FaArrowRightLong /></span> </button>
+
                     </div>
                 </div>
 
@@ -82,7 +79,7 @@ const Features = () => {
         </div>
 
         <div className={`bg-[#101223] border rounded-[32px] border-solid bg-clip-border border-transparent border-feature-border backdrop-blur-[13.4px]
-             absolute left-0 h-[2096px] lg:h-[1546px] xl:h-[1715px] xll:h-[1517px] 2xl:h-[1499px] w-full mt-32
+             absolute left-0 h-[3325px] lg:h-[1511px] xl:h-[1432px] xll:h-[1488px] 2xl:h-[1493px] w-full mt-32
             `}></div>
 
     </div>

@@ -10,7 +10,7 @@ const About = () => {
   }
   return (
     <div className='flex justify-center relative overflow-hidden'>
-            <img src="/images/about-bg.gif" alt="about-gif" className={`absolute max-w-[489px] max-h-[489px] w-[100%] h-[100%] top-[40%] left-0 transform translate-x-[-20%]`} />
+            <img src="/images/about-bg.gif" alt="about-gif" className={`absolute max-w-[489px] max-h-[489px] w-[100%] h-[100%] top-[40%] left-0 transform translate-x-[-20%] `} />
 
         <div className="container mx-auto px-8 mt-[66px] md:mt-[76px] lg:mt-[100px] xll:px-8 2xl:px-0 flex xl:mt-[133px] relative">
 

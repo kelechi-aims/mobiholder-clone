@@ -15,7 +15,6 @@ const Pricing = () => {
   return (
     <div>
         <div className='bg-[url("/images/home-hero.gif")] bg-cover flex flex-col justify-center'>
-            <Navbar />
             <div className='container mx-auto px-8 md:px-0 lg:px-8 xll:px-8 2xl:px-0'>
                 <h1 className={`pt-[219px] font-grifter font-bold text-white pb-[105px]
                     text-[70px] leading-[114.8px]`}
@@ -23,13 +22,13 @@ const Pricing = () => {
             </div>
         </div>
 
-        <div>
+        <div className='relative overflow-hidden'>
             <div className='container mx-auto px-8 md:px-0 lg:px-8 xll:px-8 2xl:px-0'>
                 <div className='rounded-[40px] bg-[#0d0e1d] mt-[140px] mb-[240px] px-[66px]  py-[140px]'>
                     <div className='flex justify-center items-center text-center'>
                         <h3 className={`mb-[100px] font-grifter font-bold text-transparent bg-clip-text bg-pricing-txt w-[50%] md:w-[55%] 2xl:w-[41%]
                             text-[40px] leading-[60px]
-                            lg:text-[55px] lg:leading-[75px]
+                            lg:text-[52px] lg:leading-[75px]
                             xl:text-[64px] xl:leading-[72px] tracking-[-4px]`}>Choose a plan that best suits you</h3>
                     </div>
 
@@ -77,6 +76,7 @@ const Pricing = () => {
                     </div>
                 </div>
             </div>
+            <img src="/images/pricing-vector.png" alt="vector design" className='absolute top-[6%] xll:left-[5%] 2xl:left-[25%]' />
         </div>
 
 

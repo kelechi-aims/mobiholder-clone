@@ -31,19 +31,19 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='py-[23px] backdrop-blur-[53px] px-8 flex items-center justify-center bg-nav-gradient xl:px-0'>
+    <div className='py-[23px] backdrop-blur-[53px] px-8 flex items-center justify-center bg-nav-gradient xl:px-0 top-0 left-0 fixed w-full'>
       <div className={`
         container flex flex-row mx-auto justify-between items-center text-white xll:px-8 2xl:px-0
         `}>
 
           {/* Logo section */}
-        <div>
+        <Link to='/'>
           <img 
             src="/images/logo.png" 
             alt="nav logo" 
             className="max-w-[60%] xl:max-w-[80%]"
           />
-        </div>
+        </Link>
 
         {/* Navition links */}
         <div className="hidden lg:flex flex-row gap-[64px] lg:gap-[34px]">

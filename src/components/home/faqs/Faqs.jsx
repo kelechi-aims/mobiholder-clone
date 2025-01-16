@@ -27,7 +27,7 @@ const Faqs = () => {
                         >
                             <button
                                 onClick={() => toggleAccordion(index)}
-                                className='flex items-center justify-between w-full text-left focus:outline-none font-inter font-medium text-[28px] leading-[49px]'
+                                className='flex items-center justify-between w-full text-left focus:outline-none font-inter font-medium text-lg lg:text-xl 2xl:text-[28px] 2xl:leading-[49px]'
                             >
                                 {faq.question}
                                 <span className={`transform transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}>

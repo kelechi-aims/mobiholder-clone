@@ -184,4 +184,218 @@ export const pricing = [
         price: "60,000",
         features: ["Access to Membership", "Access to Events", "Access to Verification", "Add 10 IDs", "Communication tools", "Reporting and Analytics"]
     },
-]
+];
+
+export const fqasData = [
+    {
+        type: "General",
+        content: [
+            {
+                question: "What is MobiHolder?",
+                answer:
+                  "MobiHolder is an innovative platform designed to streamline event management and data security for its users.",
+            },
+            {
+                question: "How does MobiHolder ensure data security?",
+                answer:
+                  "MobiHolder employs advanced encryption methods and regular security audits to safeguard user data.",
+            },
+            {
+                question: "Who can use MobiHolder?",
+                answer:
+                  "MobiHolder is suitable for event organizers, businesses, and individuals looking for efficient event management.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+        ],
+    },
+    {
+        type: "Privacy",
+        content: [
+            {
+                question: "What is MobiHolder?",
+                answer:
+                  "MobiHolder is an innovative platform designed to streamline event management and data security for its users.",
+            },
+            {
+                question: "How does MobiHolder ensure data security?",
+                answer:
+                  "MobiHolder employs advanced encryption methods and regular security audits to safeguard user data.",
+            },
+            {
+                question: "Who can use MobiHolder?",
+                answer:
+                  "MobiHolder is suitable for event organizers, businesses, and individuals looking for efficient event management.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+        ],
+    },
+    {
+        type: "Events",
+        content: [
+            {
+                question: "What is MobiHolder?",
+                answer:
+                  "MobiHolder is an innovative platform designed to streamline event management and data security for its users.",
+            },
+            {
+                question: "How does MobiHolder ensure data security?",
+                answer:
+                  "MobiHolder employs advanced encryption methods and regular security audits to safeguard user data.",
+            },
+            {
+                question: "Who can use MobiHolder?",
+                answer:
+                  "MobiHolder is suitable for event organizers, businesses, and individuals looking for efficient event management.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+            {
+                question: "Who can use MobiHolder?",
+                answer:
+                  "MobiHolder is suitable for event organizers, businesses, and individuals looking for efficient event management.",
+            },
+            {
+                question: "Who can use MobiHolder?",
+                answer:
+                  "MobiHolder is suitable for event organizers, businesses, and individuals looking for efficient event management.",
+            },
+        ],
+    },
+    {
+        type: "Support",
+        content: [
+            {
+                question: "What is MobiHolder?",
+                answer:
+                  "MobiHolder is an innovative platform designed to streamline event management and data security for its users.",
+            },
+            {
+                question: "How does MobiHolder ensure data security?",
+                answer:
+                  "MobiHolder employs advanced encryption methods and regular security audits to safeguard user data.",
+            },
+            {
+                question: "Who can use MobiHolder?",
+                answer:
+                  "MobiHolder is suitable for event organizers, businesses, and individuals looking for efficient event management.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+        ],
+    },
+    {
+        type: "ID Management",
+        content: [
+            {
+                question: "What is MobiHolder?",
+                answer:
+                  "MobiHolder is an innovative platform designed to streamline event management and data security for its users.",
+            },
+            {
+                question: "How does MobiHolder ensure data security?",
+                answer:
+                  "MobiHolder employs advanced encryption methods and regular security audits to safeguard user data.",
+            },
+            {
+                question: "Who can use MobiHolder?",
+                answer:
+                  "MobiHolder is suitable for event organizers, businesses, and individuals looking for efficient event management.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+            {
+                question: "Who can use MobiHolder?",
+                answer:
+                  "MobiHolder is suitable for event organizers, businesses, and individuals looking for efficient event management.",
+            },
+        ],
+    },
+    {
+        type: "Profile",
+        content: [
+            {
+                question: "What is MobiHolder?",
+                answer:
+                  "MobiHolder is an innovative platform designed to streamline event management and data security for its users.",
+            },
+            {
+                question: "How does MobiHolder ensure data security?",
+                answer:
+                  "MobiHolder employs advanced encryption methods and regular security audits to safeguard user data.",
+            },
+            {
+                question: "Who can use MobiHolder?",
+                answer:
+                  "MobiHolder is suitable for event organizers, businesses, and individuals looking for efficient event management.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+            {
+                question: "How does MobiHolder streamline event management?",
+                answer:
+                  "The platform automates tasks such as ticketing, attendee tracking, and communication, saving time and effort.",
+            },
+        ],
+    }
+];
+
+export const featuresData = [
+    {
+      id: 1,
+      title: "Easy Sign Up",
+      description: "Choose a user type and get started in seconds with our simple and user-friendly sign-up process. Start exploring without any hassle!",
+      image: "/images/feature-img1.png",
+    },
+    {
+      id: 2,
+      title: "Never lose your IDs",
+      description: "Keep all your important IDs safe and accessible in one secure place. Our platform allows you to store, organize, and retrieve your IDs effortlessly, so you’re never scrambling to find them when you need them most.",
+      image: "/images/feature-img2.png",
+    },
+    {
+      id: 3,
+      title: "24/7 Customer Support",
+      description: "You’ll receive regular reports on your privacy status and any outstanding threats. If new records become associated with you, we will send you an alert.",
+      image: "/images/feature-img3.png",
+    },
+];
