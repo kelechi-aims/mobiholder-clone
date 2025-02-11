@@ -1,29 +1,25 @@
-import React from 'react';
 import "./App.css";
-import Home from './pages/home/Home';
-import Footer from './components/footer/Footer';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet
-} from "react-router-dom";
-import Pricing from './pages/pricing/Pricing';
-import FqasPage from './pages/fqas/FqasPage';
-import ContactUs from './pages/contactus/ContactUs';
-import Navbar from './components/navbar/Navbar';
+import Home from "./pages/home/Home";
+import Footer from "./components/footer/Footer";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Pricing from "./pages/pricing/Pricing";
+import FqasPage from "./pages/fqas/FqasPage";
+import ContactUs from "./pages/contactus/ContactUs";
+import Navbar from "./components/navbar/Navbar";
+import Legal from "./pages/legal/Legal";
 
 const App = () => {
   const Layout = () => {
     return (
-      <div className='relative'>
-        <div className='z-50 absolute w-full'>
-          <Navbar/>
+      <div className="relative">
+        <div className="z-50 absolute w-full">
+          <Navbar />
         </div>
         <Outlet />
         <Footer />
       </div>
-    )
-  }
+    );
+  };
 
   const router = createBrowserRouter([
     {
@@ -32,22 +28,26 @@ const App = () => {
       children: [
         {
           path: "/",
-          element: <Home />
+          element: <Home />,
         },
         {
           path: "/pricing",
-          element: <Pricing />
+          element: <Pricing />,
         },
         {
           path: "/fqas",
-          element: <FqasPage />
+          element: <FqasPage />,
         },
         {
           path: "/contactus",
-          element: <ContactUs />
-        }
-      ]
-    }
+          element: <ContactUs />,
+        },
+        {
+          path: "/legal",
+          element: <Legal />,
+        },
+      ],
+    },
   ]);
 
   return (
@@ -55,6 +55,6 @@ const App = () => {
       <RouterProvider router={router} />
     </div>
   );
-}
+};
 
-export default App
+export default App;
