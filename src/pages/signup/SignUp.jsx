@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const SignUp = () => {
   return (
     <div>
-      <div className="bg-[#15171f] py-0 h-screen">
+      <div className="bg-[#15171f] py-10 min-h-[100vh]">
         <div className="container mx-auto px-8 md:px-0 lg:px-8 xll:px-8 2xl:px-0">
           <div className="px-20 md:px-2 xl:px-40">
             <div className="justify-center items-center flex flex-col pb-10 pt-24">
@@ -20,8 +20,8 @@ const SignUp = () => {
                 Welcome! Choose a user type to Sign Up as :
               </p>
             </div>
-            <div className="flex flex-col md:flex-row justify-between mb-24">
-              <div className="w-[47%]">
+            <div className="flex sm:flex-col items-center justify-center md:flex-row md:justify-between gap-24 mb-24">
+              <div className="w-full md:w-[47%]">
                 <Link to="/signup/individual">
                   <div className="p-[1px] bg-signup-individual-bg">
                     <div className="bg-[#24152D]">
@@ -42,7 +42,7 @@ const SignUp = () => {
                 </Link>
               </div>
 
-              <div className="w-[47%]">
+              <div className="w-full md:w-[47%]">
                 <Link to="/signup/organization">
                   <div className="p-[1px] bg-signup-Organization-bg">
                     <div className="bg-[#15182d]">
