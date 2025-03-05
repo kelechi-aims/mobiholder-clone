@@ -38,9 +38,15 @@ export default {
           "linear-gradient(180deg, #2BFFFF 0%, rgba(43, 255, 255, 0.41) 100%)",
         "contactus-bg":
           "linear-gradient(171.36deg, #17209B 6.6%, #1825A1 63.68%)",
+        "signup-individual-bg":
+          "linear-gradient(82.88deg, #29163D 72.05%, #A33AA0 124.35%)",
+        "signup-Organization-bg":
+          "linear-gradient(82.88deg, #16183D 72.05%, #3C3AA3 124.35%)",
+        "signup-bdr": "linear-gradient(278.85deg, #2E2F36 13%, #85889C 93.28%)",
       },
       boxShadow: {
         "custom-inset": "inset 0px 0px 1px 2px #A324F226",
+        "about-sh": "0px 4px 28px 0px rgba(0, 0, 0, 0.15)",
       },
       backdropBlur: {
         "nav-blur": "53.8px",
@@ -52,12 +58,10 @@ export default {
         roboto: ["Roboto", "serif"],
         mulish: ["Mulish", "serif"],
         unbounded: ["Unbounded", "serif"],
+        montserrat: ["Montserrat", "serif"],
       },
       colors: {
         purple: "#a324f2",
-      },
-      boxShadow: {
-        "about-sh": "0px 4px 28px 0px rgba(0, 0, 0, 0.15)",
       },
     },
   },
