@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 const SignUp = () => {
   return (
     <div>
-      <div className="bg-[#15171f] py-10 min-h-[100vh]">
+      <div className="bg-[#15171f] py-40 md:py-8 lg:py-10 xl:py-20 min-h-screen">
         <div className="container mx-auto px-8 md:px-0 lg:px-8 xll:px-8 2xl:px-0">
-          <div className="px-20 md:px-2 xl:px-40">
-            <div className="justify-center items-center flex flex-col pb-10 pt-24">
-              <div className="mb-10">
+          <div className="md:px-0 xl:px-40 flex flex-col gap-40 md:gap-16 lg:gap-20">
+            <div className="justify-center items-center flex flex-col gap-16">
+              <div className="">
                 <Link to="/">
                   <img
                     src="/images/logo.png"
@@ -16,12 +16,12 @@ const SignUp = () => {
                   />
                 </Link>
               </div>
-              <p className="font-montserrat font-medium text-[22px] xl:text-[24px] xls:text-[26px] leading-[33.64px] tracking-[-3%] text-[#ffffff]">
+              <p className="font-montserrat font-medium text-[24px] xl:text-[24px] xls:text-[26px] leading-[33.64px] tracking-[-3%] text-[#ffffff]">
                 Welcome! Choose a user type to Sign Up as :
               </p>
             </div>
-            <div className="flex sm:flex-col items-center justify-center md:flex-row md:justify-between gap-24 mb-24">
-              <div className="w-full md:w-[47%]">
+            <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between gap-24 md:gap-12">
+              <div className="w-[60%] md:w-[65%] lg:w-[47%]">
                 <Link to="/signup/individual">
                   <div className="p-[1px] bg-signup-individual-bg">
                     <div className="bg-[#24152D]">
@@ -42,7 +42,7 @@ const SignUp = () => {
                 </Link>
               </div>
 
-              <div className="w-full md:w-[47%]">
+              <div className="w-[60%] md:w-[65%] lg:w-[47%]">
                 <Link to="/signup/organization">
                   <div className="p-[1px] bg-signup-Organization-bg">
                     <div className="bg-[#15182d]">
@@ -54,16 +54,16 @@ const SignUp = () => {
                   </div>
                   <div className="bg-[#242ef2] rounded-[7px] p-8">
                     <h6 className="font-inter font-semibold text-[24px] leading-[29.05px] text-[#eeeeee] mb-3">
-                      Individual
+                      Organisation
                     </h6>
                     <p className="font-inter font-medium text-[16px] leading-[20.06px] text-[#fefefe]">
-                      This account type is for regular users
+                      This account type is for companies and organizations
                     </p>
                   </div>
                 </Link>
               </div>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center pb-96 md:pb-0">
               <div className="border bg-[#2e2f36] border-[#525151] rounded-full py-6 px-[53px] w-fit ">
                 <p className="font-inter font-normal text-[20px] leading-[100%] tracking-[0%] text-center text-[#ffffff] ">
                   Already have an account ? Proceed to{" "}

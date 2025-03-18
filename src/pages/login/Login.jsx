@@ -2,32 +2,33 @@ import { MdOutlineEmail } from "react-icons/md";
 import { CiLock } from "react-icons/ci";
 import { IoEyeOffOutline } from "react-icons/io5";
 import SignUpSlider from "../../components/signupslider/SignUpSlider";
-import { IoMdArrowDropdown } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="bg-[#0d0d0d] pt-[80.5px]">
-      <div className="container max-w-full flex justify-between">
-        <div className="w-[33%]">
+    <div className="bg-[#0d0d0d]">
+      <div className="container max-w-full flex justify-between min-h-screen">
+        <div className="hidden lg:block lg:w-[40%] xl:w-[33%] fixed overflow-hidden">
           <SignUpSlider />
         </div>
-        <div className="py-32 w-[55%]">
+        <div className="w-full flex items-center justify-center min-h-screen xl:py-32 lg:w-[60%] lg:ml-[40%]">
           <div className="flex justify-center flex-col w-[65%]">
-            <div className="mb-12">
-              <img src="/images/logo.png" alt="mobiholder logo" />
+            <div className="pb-12">
+              <Link to="/">
+                <img src="/images/logo.png" alt="mobiholder logo" />
+              </Link>
             </div>
             <div className="relative p-[2px] bg-signup-bdr rounded-[7px]">
               <div className=" bg-[#0d0d0d] rounded-[7px] ">
                 <form className="p-9">
-                  <h3 className="font-montserrat font-medium text-[28px] leading-[42.7px] tracking-[-3%] text-[#ffffff] mb-7">
+                  <h3 className="font-montserrat font-medium text-[20px] lg:text-[22px] xl:text-[24px] xll:text-[28px] leading-[42.7px] tracking-[-3%] text-[#ffffff] mb-7">
                     Login to your account
                   </h3>
 
                   <div className="mb-10">
                     <label
                       htmlFor="username"
-                      className={`mb-2 block font-inter font-normal text-lg tracking-tight text-[#999797] focus:outline-none
+                      className={`mb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                     >
@@ -50,7 +51,7 @@ const Login = () => {
                   <div className="mb-3">
                     <label
                       htmlFor="password"
-                      className={`mb-2 block font-inter font-normal text-lg tracking-tight text-[#999797] focus:outline-none
+                      className={`mb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                     >
@@ -88,6 +89,14 @@ const Login = () => {
                   </Link>
                 </form>
               </div>
+            </div>
+            <div className="flex justify-center mt-8">
+              <p className="font-inter font-normal text-[16px] lg:text-[17px] xl:text-[18px] xll:text-[20px] leading-[30.5px] tracking-[3%] text-[#ffffff]">
+                Don’t have an account?{" "}
+                <Link to="/signup" className="underline">
+                  Sign Up
+                </Link>
+              </p>
             </div>
           </div>
         </div>
