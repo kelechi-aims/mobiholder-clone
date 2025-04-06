@@ -12,7 +12,7 @@ const SignUpIndividual = () => {
         </div>
         <div className="flex justify-center items-center xl:ml-[45%] ">
           <div className="flex flex-col lg:pt-[400px] xl:pt-[350px] 2xl:pt-2">
-            <div className="w-full xl:w-mim">
+            <div className="w-full xl:w-min">
               <div className="flex justify-between items-center pb-12">
                 <Link to="/">
                   <img src="/images/logo.png" alt="mobiholder logo" />
