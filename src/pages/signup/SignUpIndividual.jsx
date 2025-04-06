@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 
 const SignUpIndividual = () => {
   return (
-    <div className=" w-full h-screen">
-      <div className="flex justify-between bg-[#0d0d0d] h-full">
-        <div className="xl:w-[40%] hidden xl:block fixed">
+    <div className="">
+      <div className="flex justify-center items-center xl:justify-between bg-[#0d0d0d] h-screen w-full md:overflow-y-auto">
+        <div className="xl:w-[35%] hidden xl:flex fixed xls:w-[30%]">
           <SignUpSlider />
         </div>
-        <div className="flex w-full justify-center items-center xl:overflow-y-auto">
-          <div className="flex flex-col xl:py-32 xl:ml-[45%]  ">
-            <div>
-              <div className="flex justify-between items-center mb-12">
+        <div className="flex justify-center items-center xl:ml-[45%] ">
+          <div className="flex flex-col lg:pt-[400px] xl:pt-[350px] 2xl:pt-2">
+            <div className="w-full xl:w-mim">
+              <div className="flex justify-between items-center pb-12">
                 <Link to="/">
                   <img src="/images/logo.png" alt="mobiholder logo" />
                 </Link>
@@ -21,17 +21,18 @@ const SignUpIndividual = () => {
                   Individual <IoMdArrowDropdown />
                 </button>
               </div>
+              {/* <div>Organization</div> */}
               <div className="relative p-[1px] bg-signup-bdr rounded-[7px]">
                 <form className="bg-[#0d0d0d] rounded-[7px] p-9">
-                  <h3 className="font-montserrat font-medium text-[28px] leading-[42.7px] tracking-[-3%] text-[#ffffff] mb-7">
+                  <h3 className="font-montserrat font-medium text-[20px] lg:text-[22px] xl:text-[24px] xll:text-[28px] leading-[42.7px] tracking-[-3%] text-[#ffffff] pb-7">
                     Sign Up as Individual
                   </h3>
 
-                  <div className="flex mb-10 gap-10">
+                  <div className="flex pb-10 gap-10">
                     <div>
                       <label
                         htmlFor="fname"
-                        className={`mb-2 block font-inter font-normal text-lg tracking-tight text-[#999797] focus:outline-none
+                        className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                       >
@@ -46,7 +47,7 @@ const SignUpIndividual = () => {
                         type="text"
                         id="fname"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[300px]"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-min"
                         placeholder="Enter your first name"
                       />
                     </div>
@@ -54,7 +55,7 @@ const SignUpIndividual = () => {
                     <div>
                       <label
                         htmlFor="lname"
-                        className={`mb-2 block font-inter font-normal text-lg tracking-tight text-[#999797] focus:outline-none
+                        className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                       >
@@ -69,17 +70,17 @@ const SignUpIndividual = () => {
                         type="text"
                         id="lname"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[300px]"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-min"
                         placeholder="Enter your last name"
                       />
                     </div>
                   </div>
 
-                  <div className="flex mb-10 gap-10">
+                  <div className="flex pb-10 gap-10">
                     <div>
                       <label
                         htmlFor="email"
-                        className={`mb-2 block font-inter font-normal text-lg tracking-tight text-[#999797] focus:outline-none
+                        className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                       >
@@ -94,7 +95,7 @@ const SignUpIndividual = () => {
                         type="email"
                         id="email"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[300px]"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-min"
                         placeholder="Enter your first name"
                       />
                     </div>
@@ -102,7 +103,7 @@ const SignUpIndividual = () => {
                     <div>
                       <label
                         htmlFor="phone"
-                        className={`mb-2 block font-inter font-normal text-lg tracking-tight text-[#999797] focus:outline-none
+                        className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                       >
@@ -117,16 +118,16 @@ const SignUpIndividual = () => {
                         type="text"
                         id="phone"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[300px]"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-min"
                         placeholder="Enter your first name"
                       />
                     </div>
                   </div>
 
-                  <div className="mb-10">
+                  <div className="pb-10">
                     <label
                       htmlFor="username"
-                      className={`mb-2 block font-inter font-normal text-lg tracking-tight text-[#999797] focus:outline-none
+                      className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                     >
@@ -146,10 +147,10 @@ const SignUpIndividual = () => {
                     />
                   </div>
 
-                  <div className="mb-10">
+                  <div className="pb-10">
                     <label
                       htmlFor="password"
-                      className={`mb-2 block font-inter font-normal text-lg tracking-tight text-[#999797] focus:outline-none
+                      className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                     >
@@ -169,7 +170,7 @@ const SignUpIndividual = () => {
                     />
                   </div>
 
-                  <div className="flex gap-3 mb-10">
+                  <div className="flex gap-3 pb-10">
                     <input type="checkbox" className="hidden peer" />
                     <div className="h-6 w-6 rounded-[3px] border border-[#999797]">
                       <svg
@@ -203,6 +204,14 @@ const SignUpIndividual = () => {
                   </Link>
                 </form>
               </div>
+            </div>
+            <div className="flex justify-center mt-8">
+              <p className="font-inter font-normal text-[16px] lg:text-[17px] xl:text-[18px] xll:text-[20px] leading-[30.5px] tracking-[3%] text-[#ffffff]">
+                Already have an account?{" "}
+                <Link to="/signup" className="underline text-[#242ef2]">
+                  Login
+                </Link>
+              </p>
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="bg-[#0d0d0d]">
-      <div className="container max-w-full flex justify-between min-h-screen">
+      <div className="container max-w-full flex justify-between min-h-screen ">
         <div className="hidden lg:block lg:w-[40%] xl:w-[33%] fixed overflow-hidden">
           <SignUpSlider />
         </div>
@@ -93,7 +93,7 @@ const Login = () => {
             <div className="flex justify-center mt-8">
               <p className="font-inter font-normal text-[16px] lg:text-[17px] xl:text-[18px] xll:text-[20px] leading-[30.5px] tracking-[3%] text-[#ffffff]">
                 Don’t have an account?{" "}
-                <Link to="/signup" className="underline">
+                <Link to="/signup" className="underline text-[#242ef2]">
                   Sign Up
                 </Link>
               </p>
