@@ -43,7 +43,7 @@ const Navbar = () => {
           <img
             src="/images/logo.png"
             alt="nav logo"
-            className="max-w-[60%] xl:max-w-[80%]"
+            className="max-w-[60%] 2xl:max-w-[80%]"
           />
         </Link>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
             <Link
               key={index}
               to={link.path}
-              className={`font-inter text-sm lg:text-base xl:text-xl font-normal text-center hover:underline ${
+              className={`font-inter text-sm lg:text-base 2xl:text-xl font-normal text-center hover:underline ${
                 location.pathname === link.path ? "text-purple-500" : ""
               }`}
             >
@@ -66,13 +66,13 @@ const Navbar = () => {
         <div className="hidden font-inter gap-[13px] lg:flex">
           <Link to="/login">
             <button
-              className={`py-[3px] px-[47px] lg:px-[30px] border rounded-full border-white font-semibold text-lg lg:text-base text-center text-white`}
+              className={`py-[3px] px-[47px] lg:px-[30px] border rounded-full border-white font-semibold text-base 2xl:text-base text-center text-white`}
             >
               Login
             </button>
           </Link>
           <Link to="/signup">
-            <button className="py-[3px] px-[47px] lg:px-[30px] border rounded-full border-purple font-semibold text-lg  lg:text-base text-center text-white bg-purple">
+            <button className="py-[3px] px-[47px] lg:px-[30px] border rounded-full border-purple font-semibold text-base  2xl:text-base text-center text-white bg-purple">
               Sign up
             </button>
           </Link>

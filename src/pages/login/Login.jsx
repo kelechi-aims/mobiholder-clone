@@ -11,25 +11,28 @@ const Login = () => {
         <div className="hidden lg:block lg:w-[40%] xl:w-[33%] fixed overflow-hidden">
           <SignUpSlider />
         </div>
-        <div className="w-full flex items-center justify-center min-h-screen xl:py-32 lg:w-[60%] lg:ml-[40%]">
+        <div className="w-full flex items-center justify-center min-h-screen xl:py-16 lg:w-[60%] lg:ml-[40%]">
           <div className="flex justify-center flex-col w-[65%]">
             <div className="pb-12">
               <Link to="/">
-                <img src="/images/logo.png" alt="mobiholder logo" />
+                <img
+                  src="/images/logo.png"
+                  alt="mobiholder logo"
+                  className="w-[40%]"
+                />
               </Link>
             </div>
             <div className="relative p-[2px] bg-signup-bdr rounded-[7px]">
               <div className=" bg-[#0d0d0d] rounded-[7px] ">
                 <form className="p-9">
-                  <h3 className="font-montserrat font-medium text-[20px] lg:text-[22px] xl:text-[24px] xll:text-[28px] leading-[42.7px] tracking-[-3%] text-[#ffffff] mb-7">
+                  <h3 className="font-montserrat font-medium text-lg lg:text-xl 2xl:text-2xl tracking-[-3%] text-[#ffffff] mb-4">
                     Login to your account
                   </h3>
 
-                  <div className="mb-10">
+                  <div className="mb-4">
                     <label
                       htmlFor="username"
-                      className={`mb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
-                        xl:text-base
+                      className={`mb-2 block font-inter font-normal text-sm tracking-tight text-[#999797] focus:outline-none
                         2xl:text-lg`}
                     >
                       Email
@@ -43,7 +46,7 @@ const Login = () => {
                       type="text"
                       id="username"
                       required
-                      className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full"
+                      className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full text-sm 2xl:text-lg"
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -51,8 +54,7 @@ const Login = () => {
                   <div className="mb-3">
                     <label
                       htmlFor="password"
-                      className={`mb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
-                        xl:text-base
+                      className={`mb-2 block font-inter font-normal text-sm tracking-tight text-[#999797] focus:outline-none
                         2xl:text-lg`}
                     >
                       Password
@@ -69,20 +71,20 @@ const Login = () => {
                       type="text"
                       id="password"
                       required
-                      className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full"
+                      className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full text-sm 2xl:text-lg"
                       placeholder="Enter your password"
                     />
                   </div>
 
-                  <div className="flex justify-end mb-10">
-                    <p className="font-inter font-normal text-[20px] leading-[30.5px] tracking-[3%] underline text-[#242ef2]">
+                  <div className="flex justify-end mb-4">
+                    <p className="font-inter font-normal text-sm 2xl:text-lg tracking-[3%] underline text-[#242ef2]">
                       <Link className="underline">Forget Password</Link>
                     </p>
                   </div>
 
                   <Link>
                     <button className="w-full rounded-full bg-[#a324f2] py-[17px] px-[128px]">
-                      <span className="font-montserrat font-semibold text-[16px] leading-[19.5px] text-[#ffffff]">
+                      <span className="font-montserrat font-semibold text-sm 2xl:text-base text-[#ffffff]">
                         Login
                       </span>
                     </button>
@@ -91,7 +93,7 @@ const Login = () => {
               </div>
             </div>
             <div className="flex justify-center mt-8">
-              <p className="font-inter font-normal text-[16px] lg:text-[17px] xl:text-[18px] xll:text-[20px] leading-[30.5px] tracking-[3%] text-[#ffffff]">
+              <p className="font-inter font-normal text-sm 2xl:text-lg tracking-[3%] text-[#ffffff]">
                 Don’t have an account?{" "}
                 <Link to="/signup" className="underline text-[#242ef2]">
                   Sign Up

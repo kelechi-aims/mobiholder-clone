@@ -5,17 +5,15 @@ import { Link } from "react-router-dom";
 
 const ProgressBar = () => {
   return (
-    <div className="border rounded-[10px] bg-[#2e2f36] br-[#000000] p-6">
-      <p className="font-inter font-normal text-[15px]  text-[#c7c6c6]">
-        STEP 1
-      </p>
+    <div className="border rounded-[10px] bg-[#2e2f36] br-[#000000] p-4">
+      <p className="font-inter font-normal text-sm  text-[#c7c6c6]">STEP 1</p>
       <div>
-        <p className="font-inter font-normal text-[18px]  text-[#c7c6c6]">
+        <p className="font-inter font-normal text-base  text-[#c7c6c6]">
           Organization Info
         </p>
         <div className="w-full bg-[#c7c6c6] h-1.5 mt-2 rounded-full relative">
-          <div className="bg-[#242ef2] h-2 rounded-[10px] w-1/2"></div>
-          <div className="absolute top-[-5px] left-[50%] w-4 h-4 bg-white rounded-full border-2 border-gray-500"></div>
+          <div className="bg-[#242ef2] h-1.5 rounded-[10px] w-1/2"></div>
+          <div className="absolute top-[-4px] left-[49%] w-3 h-3 bg-white rounded-full border-2 border-gray-500"></div>
         </div>
       </div>
     </div>
@@ -26,33 +24,37 @@ const SignUpOrganization = () => {
   return (
     <div className="">
       <div className="flex justify-center items-center xl:justify-between bg-[#0d0d0d] h-screen w-full md:overflow-y-auto">
-        <div className="xl:w-[35%] hidden xl:flex fixed xls:w-[30%]">
+        <div className="hidden xl:block lg:w-[40%] xl:w-[33%] fixed overflow-hidden">
           <SignUpSlider />
         </div>
-        <div className="flex  justify-center items-center xl:ml-[45%]">
-          <div className="flex flex-col lg:pt-[400px] xl:pt-[350px] 2xl:pt-2">
-            <div>
+        <div className="w-full flex justify-center items-center xl:ml-[40%] py-16 pt-[400px]">
+          <div className="flex flex-col">
+            <div className="w-full xl:w-min">
               <div className="flex justify-between items-center pb-12">
                 <Link to="/">
-                  <img src="/images/logo.png" alt="mobiholder logo" />
+                  <img
+                    src="/images/logo.png"
+                    alt="mobiholder logo"
+                    className="w-[70%]"
+                  />
                 </Link>
-                <button className="font-inter font-light text-[18px] leading-[27.45px] tracking-[-3%] text-[#a324f2] flex gap-4 items-center border bg-[#24152d] border-[#a324f2] rounded-[7px] pr-2 pl-10">
+                <button className="font-inter font-light text-sm 2xl:text-lg tracking-[-3%] text-[#a324f2] flex gap-4 items-center border bg-[#24152d] border-[#a324f2] rounded-[7px] pr-2 pl-10">
                   Organisation <IoMdArrowDropdown />
                 </button>
               </div>
               <div className="relative p-[1px] bg-signup-bdr rounded-[7px]">
                 <form className="bg-[#0d0d0d] rounded-[7px] p-9">
-                  <h3 className="font-montserrat font-medium text-[20px] lg:text-[22px] xl:text-[24px] xll:text-[28px] leading-[42.7px] tracking-[-3%] text-[#ffffff] pb-7">
+                  <h3 className="font-montserrat font-medium text-[20px] text-lg lg:text-xl 2xl:text-2xl tracking-[-3%] text-[#ffffff] pb-4">
                     Sign Up as Organisation
                   </h3>
 
                   <ProgressBar />
-                  <div className="flex pb-10 gap-10">
+                  <div className="flex py-4 gap-10">
                     <div>
                       <label
                         htmlFor="fname"
-                        className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
-                        xl:text-base
+                        className={`pb-2 block font-inter font-normal text-sm tracking-tight text-[#999797] focus:outline-none
+                        
                         2xl:text-lg`}
                       >
                         First Name
@@ -66,7 +68,7 @@ const SignUpOrganization = () => {
                         type="text"
                         id="fname"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[300px]"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
                         placeholder="Enter your first name"
                       />
                     </div>
@@ -74,8 +76,8 @@ const SignUpOrganization = () => {
                     <div>
                       <label
                         htmlFor="lname"
-                        className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
-                        xl:text-base
+                        className={`pb-2 block font-inter font-normal text-sm tracking-tight text-[#999797] focus:outline-none
+                        
                         2xl:text-lg`}
                       >
                         Last Name
@@ -89,18 +91,18 @@ const SignUpOrganization = () => {
                         type="text"
                         id="lname"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[300px]"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
                         placeholder="Enter your last name"
                       />
                     </div>
                   </div>
 
-                  <div className="flex pb-10 gap-10">
+                  <div className="flex pb-4 gap-10">
                     <div>
                       <label
                         htmlFor="email"
-                        className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
-                        xl:text-base
+                        className={`pb-2 block font-inter font-normal text-sm tracking-tight text-[#999797] focus:outline-none
+                        
                         2xl:text-lg`}
                       >
                         Email
@@ -114,7 +116,7 @@ const SignUpOrganization = () => {
                         type="email"
                         id="email"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[300px]"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
                         placeholder="Enter your first name"
                       />
                     </div>
@@ -122,8 +124,8 @@ const SignUpOrganization = () => {
                     <div>
                       <label
                         htmlFor="phone"
-                        className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
-                        xl:text-base
+                        className={`pb-2 block font-inter font-normal text-sm tracking-tight text-[#999797] focus:outline-none
+                        
                         2xl:text-lg`}
                       >
                         Phone Number
@@ -137,17 +139,17 @@ const SignUpOrganization = () => {
                         type="text"
                         id="phone"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[300px]"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
                         placeholder="Enter your first name"
                       />
                     </div>
                   </div>
 
-                  <div className="pb-10">
+                  <div className="pb-4">
                     <label
                       htmlFor="username"
-                      className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
-                        xl:text-base
+                      className={`pb-2 block font-inter font-normal text-sm tracking-tight text-[#999797] focus:outline-none
+                        
                         2xl:text-lg`}
                     >
                       Username
@@ -161,16 +163,16 @@ const SignUpOrganization = () => {
                       type="text"
                       id="username"
                       required
-                      className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full"
+                      className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full text-sm 2xl:text-lg"
                       placeholder="Enter your first name"
                     />
                   </div>
 
-                  <div className="pb-10">
+                  <div className="pb-4">
                     <label
                       htmlFor="password"
-                      className={`pb-2 block font-inter font-normal text-lg lg:text-[16px] tracking-tight text-[#999797] focus:outline-none
-                        xl:text-base
+                      className={`pb-2 block font-inter font-normal text-sm tracking-tight text-[#999797] focus:outline-none
+                        
                         2xl:text-lg`}
                     >
                       Password
@@ -184,14 +186,14 @@ const SignUpOrganization = () => {
                       type="text"
                       id="password"
                       required
-                      className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full"
+                      className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full text-sm 2xl:text-lg"
                       placeholder="Enter your first name"
                     />
                   </div>
 
-                  <div className="flex gap-3 pb-10">
+                  <div className="flex gap-3 pb-6">
                     <input type="checkbox" className="hidden peer" />
-                    <div className="h-6 w-6 rounded-[3px] border border-[#999797]">
+                    <div className="h-4 w-4 rounded-[3px] border border-[#999797]">
                       <svg
                         className="w-4 h-4 text-white hidden peer-checked:block"
                         fill="none"
@@ -207,7 +209,7 @@ const SignUpOrganization = () => {
                         ></path>
                       </svg>
                     </div>
-                    <p className="font-inter font-normal text-[18px] leading-[26.44px] tracking-[0%] text-[#c7c6c6]">
+                    <p className="font-inter font-normal text-sm 2xl:text-lg tracking-[0%] text-[#c7c6c6]">
                       I agree to the{" "}
                       <Link className="underline">Terms & Conditions</Link> and{" "}
                       <Link className="underline">Privacy Policy.</Link>
@@ -216,7 +218,7 @@ const SignUpOrganization = () => {
 
                   <Link>
                     <button className="w-full rounded-full bg-[#a324f2] py-[17px] px-[128px]">
-                      <span className="font-montserrat font-semibold text-[16px] leading-[19.5px] text-[#ffffff]">
+                      <span className="font-montserrat font-semibold text-sm 2xl:text-base text-[#ffffff]">
                         Sign Up
                       </span>
                     </button>
@@ -225,7 +227,7 @@ const SignUpOrganization = () => {
               </div>
             </div>
             <div className="flex justify-center mt-8">
-              <p className="font-inter font-normal text-[16px] lg:text-[17px] xl:text-[18px] xll:text-[20px] leading-[30.5px] tracking-[3%] text-[#ffffff]">
+              <p className="font-inter font-normal text-sm 2xl:text-lg tracking-[3%] text-[#ffffff]">
                 Already have an account?{" "}
                 <Link to="/signup" className="underline text-[#242ef2]">
                   Login

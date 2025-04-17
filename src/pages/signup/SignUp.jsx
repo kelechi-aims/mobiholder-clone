@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 const SignUp = () => {
   return (
     <div>
-      <div className="bg-[#15171f] py-40 md:py-8 lg:py-10 xl:py-20 min-h-screen">
+      <div className="bg-[#15171f] py-40 md:py-8 lg:py-12 min-h-screen">
         <div className="container mx-auto px-8 md:px-0 lg:px-8 xll:px-8 2xl:px-0">
-          <div className="md:px-0 xl:px-40 flex flex-col gap-40 md:gap-16 lg:gap-20">
-            <div className="justify-center items-center flex flex-col gap-16">
+          <div className="md:px-0 xl:px-40 flex flex-col gap-40 md:gap-16 lg:gap-10">
+            <div className="justify-center items-center flex flex-col gap-10">
               <div className="">
                 <Link to="/">
                   <img
@@ -16,7 +16,7 @@ const SignUp = () => {
                   />
                 </Link>
               </div>
-              <p className="font-montserrat font-medium text-[24px] xl:text-[24px] xls:text-[26px] leading-[33.64px] tracking-[-3%] text-[#ffffff]">
+              <p className="font-montserrat font-medium text-[20px] xl:text-[20px] xls:text-[26px] 2xl:leading-[33.64px] tracking-[-3%] text-[#ffffff]">
                 Welcome! Choose a user type to Sign Up as :
               </p>
             </div>
@@ -28,6 +28,7 @@ const SignUp = () => {
                       <img
                         src="/images/reg-individual-vector.png"
                         alt="reg-individual-vector"
+                        className=""
                       />
                     </div>
                   </div>
@@ -35,7 +36,7 @@ const SignUp = () => {
                     <h6 className="font-inter font-semibold text-[24px] leading-[29.05px] text-[#eeeeee] mb-3">
                       Individual
                     </h6>
-                    <p className="font-inter font-medium text-[16px] leading-[20.06px] text-[#fefefe]">
+                    <p className="font-inter font-medium md:text-sm 2xl:text-[16px] leading-[20.06px] text-[#fefefe]">
                       This account type is for regular users
                     </p>
                   </div>
@@ -56,7 +57,7 @@ const SignUp = () => {
                     <h6 className="font-inter font-semibold text-[24px] leading-[29.05px] text-[#eeeeee] mb-3">
                       Organisation
                     </h6>
-                    <p className="font-inter font-medium text-[16px] leading-[20.06px] text-[#fefefe]">
+                    <p className="font-inter font-medium md:text-sm 2xl:text-[16px] leading-[20.06px] text-[#fefefe]">
                       This account type is for companies and organizations
                     </p>
                   </div>
@@ -65,7 +66,7 @@ const SignUp = () => {
             </div>
             <div className="flex items-center justify-center pb-96 md:pb-0">
               <div className="border bg-[#2e2f36] border-[#525151] rounded-full py-6 px-[53px] w-fit ">
-                <p className="font-inter font-normal text-[20px] leading-[100%] tracking-[0%] text-center text-[#ffffff] ">
+                <p className="font-inter font-normal md:text-sm 2xl:text-[20px] leading-[100%] tracking-[0%] text-center text-[#ffffff] ">
                   Already have an account ? Proceed to{" "}
                   <Link to="/login" className="text-[#4E47DC]">
                     Login
