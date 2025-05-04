@@ -2,15 +2,35 @@ import { AiOutlineUser } from "react-icons/ai";
 import SignUpSlider from "../../components/signupslider/SignUpSlider";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Link } from "react-router-dom";
-
+import { useEffect, useRef, useState } from "react";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+import { LuPhone } from "react-icons/lu";
 const SignUpIndividual = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const modalRef = useRef(null);
+
+  const handleClickOutside =
+    ((event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    },
+    []);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [handleClickOutside]);
+
   return (
     <div className="">
       <div className="flex justify-center items-center xl:justify-between bg-[#0d0d0d] h-screen w-full md:overflow-y-auto">
         <div className="hidden xl:block lg:w-[40%] xl:w-[33%] fixed overflow-hidden">
           <SignUpSlider />
         </div>
-        <div className="w-full flex justify-center items-center xl:ml-[40%] py-16 pt-[300px] ">
+        <div className="w-full flex justify-center items-center xl:ml-[40%] lg:py-16 md:pt-[300px] lg:pt-[300px] ">
           <div className="flex flex-col">
             <div className="w-full xl:w-min">
               <div className="flex justify-between items-center pb-12">
@@ -21,9 +41,19 @@ const SignUpIndividual = () => {
                     className="w-[70%]"
                   />
                 </Link>
-                <button className="font-inter font-light  text-sm 2xl:text-lg tracking-[-3%] text-[#242ef2] flex gap-4 items-center border bg-[#15182d] border-[#242ef2] rounded-[7px] pr-2 pl-10">
-                  Individual <IoMdArrowDropdown />
-                </button>
+                <div className="relative" ref={modalRef}>
+                  <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="font-inter font-light  text-sm 2xl:text-lg tracking-[-3%] text-[#242ef2]  flex gap-4 items-center border bg-[#15182d] border-[#242ef2] rounded-[7px] pr-2 pl-10"
+                  >
+                    Individual <IoMdArrowDropdown />
+                  </button>
+                  {isOpen && (
+                    <div className="text-[#E5E5E5] bg-[#0d0d0d] border border-t-0 rounded-[3px] px-6 py-2 border- absolute right-0">
+                      <Link to="/signup/organization">Organization</Link>
+                    </div>
+                  )}
+                </div>
               </div>
               {/* <div>Organization</div> */}
               <div className="relative p-[1px] bg-signup-bdr rounded-[7px]">
@@ -92,7 +122,7 @@ const SignUpIndividual = () => {
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-[30px] left-4 flex items-center pointer-events-none text-[#999797] text-base z-10">
-                          <AiOutlineUser />
+                          <HiOutlineEnvelope />
                         </div>
                       </div>
                       <input
@@ -100,7 +130,7 @@ const SignUpIndividual = () => {
                         id="email"
                         required
                         className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
-                        placeholder="Enter your first name"
+                        placeholder="Enter your email"
                       />
                     </div>
 
@@ -115,7 +145,7 @@ const SignUpIndividual = () => {
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-[30px] left-4 flex items-center pointer-events-none text-[#999797] text-base z-10">
-                          <AiOutlineUser />
+                          <LuPhone />
                         </div>
                       </div>
                       <input
@@ -123,7 +153,7 @@ const SignUpIndividual = () => {
                         id="phone"
                         required
                         className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
-                        placeholder="Enter your first name"
+                        placeholder="Enter your phone number"
                       />
                     </div>
                   </div>
@@ -146,8 +176,8 @@ const SignUpIndividual = () => {
                       type="text"
                       id="username"
                       required
-                      className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full"
-                      placeholder="Enter your first name"
+                      className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full text-sm 2xl:text-lg"
+                      placeholder="Enter your preferred username"
                     />
                   </div>
 
@@ -170,7 +200,7 @@ const SignUpIndividual = () => {
                       id="password"
                       required
                       className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full text-sm 2xl:text-lg"
-                      placeholder="Enter your first name"
+                      placeholder="Enter your preferred password"
                     />
                   </div>
 

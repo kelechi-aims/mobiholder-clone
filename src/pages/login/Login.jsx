@@ -22,8 +22,8 @@ const Login = () => {
                 />
               </Link>
             </div>
-            <div className="relative p-[2px] bg-signup-bdr rounded-[7px]">
-              <div className=" bg-[#0d0d0d] rounded-[7px] ">
+            <div className="relative p-[2px] bg-signup-bdr rounded-[30px]">
+              <div className=" bg-[#0d0d0d] rounded-[30px] ">
                 <form className="p-9">
                   <h3 className="font-montserrat font-medium text-lg lg:text-xl 2xl:text-2xl tracking-[-3%] text-[#ffffff] mb-4">
                     Login to your account
@@ -93,10 +93,10 @@ const Login = () => {
               </div>
             </div>
             <div className="flex justify-center mt-8">
-              <p className="font-inter font-normal text-sm 2xl:text-lg tracking-[3%] text-[#ffffff]">
-                Don’t have an account?{" "}
-                <Link to="/signup" className="underline text-[#242ef2]">
-                  Sign Up
+              <p className="font-inter font-normal text-sm 2xl:text-lg tracking-[3%] text-[#E5E5E5]">
+                Are you a new user ?{" "}
+                <Link to="/signup" className="underline text-[#A324F2]">
+                  Create An Account
                 </Link>
               </p>
             </div>

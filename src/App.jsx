@@ -11,6 +11,7 @@ import Login from "./pages/login/Login";
 import SignUp from "./pages/signup/SignUp";
 import SignUpIndividual from "./pages/signup/SignUpIndividual";
 import SignUpOrganization from "./pages/signup/SignUpOrganization";
+import ResetPassword from "./pages/signup/ResetPassword";
 
 const MainLayout = () => {
   return (
@@ -52,6 +53,7 @@ const router = createBrowserRouter([
       { path: "/signup", element: <SignUp /> },
       { path: "/signup/individual", element: <SignUpIndividual /> },
       { path: "/signup/organization", element: <SignUpOrganization /> },
+      { path: "/resetpassword", element: <ResetPassword /> },
     ],
   },
 ]);
