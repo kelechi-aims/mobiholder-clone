@@ -12,6 +12,8 @@ import SignUp from "./pages/signup/SignUp";
 import SignUpIndividual from "./pages/signup/SignUpIndividual";
 import SignUpOrganization from "./pages/signup/SignUpOrganization";
 import ResetPassword from "./pages/signup/ResetPassword";
+import SideMenu from "./pages/Dashboards/Individual/SideMenu/SideMenu";
+import Dashboard from "./pages/Dashboards/Individual/Dashboard/Dashboard";
 
 const MainLayout = () => {
   return (
@@ -29,6 +31,19 @@ const AuthLayout = () => {
   return (
     <div>
       <Outlet />
+    </div>
+  );
+};
+
+const DashboardLayout = () => {
+  return (
+    <div className="bg-[#000000]">
+      <div className="container p-5 w-full flex gap-2">
+        <div className="w-[22%]">
+          <SideMenu />
+        </div>
+        <Outlet />
+      </div>
     </div>
   );
 };
@@ -55,6 +70,11 @@ const router = createBrowserRouter([
       { path: "/signup/organization", element: <SignUpOrganization /> },
       { path: "/resetpassword", element: <ResetPassword /> },
     ],
+  },
+  {
+    path: "/",
+    element: <DashboardLayout />,
+    children: [{ path: "/dashboard", element: <Dashboard /> }],
   },
 ]);
 
