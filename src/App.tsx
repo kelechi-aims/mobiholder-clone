@@ -12,8 +12,10 @@ import SignUp from "./pages/signup/SignUp";
 import SignUpIndividual from "./pages/signup/SignUpIndividual";
 import SignUpOrganization from "./pages/signup/SignUpOrganization";
 import ResetPassword from "./pages/signup/ResetPassword";
-import SideMenu from "./pages/Dashboards/Individual/SideMenu/SideMenu";
+import {LargeScreenSideMenu } from "./pages/Dashboards/Individual/SideMenu/LargeScreenSideMenu";
 import Dashboard from "./pages/Dashboards/Individual/Dashboard/Dashboard";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsCondition from "./pages/legal/TermsCondition";
 
 const MainLayout = () => {
   return (
@@ -27,7 +29,7 @@ const MainLayout = () => {
   );
 };
 
-const AuthLayout = () => {
+const MinLayout = () => {
   return (
     <div>
       <Outlet />
@@ -35,12 +37,12 @@ const AuthLayout = () => {
   );
 };
 
-const DashboardLayout = () => {
+const AuthLayout = () => {
   return (
-    <div className="bg-[#000000]">
+    <div className="bg-[#0d0d0d]">
       <div className="container p-5 w-full flex gap-2">
         <div className="w-[22%]">
-          <SideMenu />
+          <LargeScreenSideMenu />
         </div>
         <Outlet />
       </div>
@@ -62,18 +64,20 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <AuthLayout />,
+    element: <MinLayout />,
     children: [
       { path: "/login", element: <Login /> },
       { path: "/signup", element: <SignUp /> },
       { path: "/signup/individual", element: <SignUpIndividual /> },
       { path: "/signup/organization", element: <SignUpOrganization /> },
       { path: "/resetpassword", element: <ResetPassword /> },
+      { path: "/privacy-policy", element: <PrivacyPolicy /> },
+      { path: "/termsandconditions", element: <TermsCondition /> },
     ],
   },
   {
     path: "/",
-    element: <DashboardLayout />,
+    element: <AuthLayout />,
     children: [{ path: "/dashboard", element: <Dashboard /> }],
   },
 ]);

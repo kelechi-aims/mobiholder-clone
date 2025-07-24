@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
-import { featuresData } from '../../../data';
+import { FeaturesData, featuresData } from '../../../data';
 
 const Features = () => {
   return (
@@ -20,7 +20,7 @@ const Features = () => {
 
             <div className='flex flex-col justify-center items-center gap-[60px] mb-[120px] px-0 xll:px-0'>
                 <div className='flex justify-between items-center flex-col w-full lg:flex-row lg:flex-wrap gap-16 lg:gap-8'>
-                    {featuresData.map((feature) => (
+                    {featuresData.map((feature: FeaturesData) => (
                         <div 
                             key={feature.id} 
                             className={`px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent 

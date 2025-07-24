@@ -1,4 +1,61 @@
-export const managerialControl = [
+export interface ManagerialControlFeature {
+  id: number;
+  title: string;
+  desc: string;
+}
+
+export interface ManagerialControlImg {
+  src: string;
+  alt: string;
+  className: string;
+}
+export interface ManagerialControlItem {
+  id: number;
+  type: string;
+  desc: string;
+  cover: string;
+  features: ManagerialControlFeature[];
+  imgs: ManagerialControlImg[];
+}
+
+export interface Blog {
+  title: string;
+  desc: string;
+  tags: string[];
+  img: string;
+  alt: string;
+}
+export interface PricingPlan {
+  name: string;
+  desc: string;
+  price: string;
+  features: string[];
+}
+export interface Faq {
+  question: string;
+  answer: string;
+}
+
+export interface FqasData{
+  type: string;
+  content: Faq[];
+}
+
+export interface FeaturesData {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export interface SignupSlider {
+  title: string;
+  desc: string;
+  img: string;
+  alt: string;
+}
+
+export const managerialControl: ManagerialControlItem[] = [
   {
     id: 1,
     type: "ID Card Management",
@@ -116,7 +173,7 @@ export const managerialControl = [
   },
 ];
 
-export const faqs = [
+export const faqs: Faq[] = [
   {
     question: "What is MobiHolder?",
     answer:
@@ -139,7 +196,7 @@ export const faqs = [
   },
 ];
 
-export const blogs = [
+export const blogs: Blog[] = [
   {
     title: "The Power of Real-Time Sales Analytics for Growth",
     desc: "In the age of data, businesses can no longer afford to rely on guesswork. Real-time sales analytics provide critical insights into your business performance, enabling you to make informed, data-driven decisions. These tools allow you to track sales trends, monitor customer behaviors, and evaluate the effectiveness of marketing strategies in real time. With detailed reports and analytics, you can refine your product offerings, focus your marketing efforts, and identify areas for operational improvement. This blog explains the transformative impact of sales analytics on business growth, showing how companies that leverage this data outperform their competitors by making smarter, faster decisions.",
@@ -170,7 +227,7 @@ export const blogs = [
   },
 ];
 
-export const pricing = [
+export const pricing: PricingPlan[] = [
   {
     name: "Basic",
     desc: "Best for personal use.",
@@ -212,7 +269,7 @@ export const pricing = [
   },
 ];
 
-export const fqasData = [
+export const fqasData: FqasData[] = [
   {
     type: "General",
     content: [
@@ -405,7 +462,7 @@ export const fqasData = [
   },
 ];
 
-export const featuresData = [
+export const featuresData: FeaturesData[] = [
   {
     id: 1,
     title: "Easy Sign Up",
@@ -429,7 +486,7 @@ export const featuresData = [
   },
 ];
 
-export const signupslider = [
+export const signupslider: SignupSlider[] = [
   {
     title: "ID Card Management made easy",
     desc: "Effortlessly create, store, and manage digital ID cards for employees, visitors, and more—all in one secure app",
@@ -453,5 +510,43 @@ export const signupslider = [
     desc: "Manage access control, and assign people to handle event access with our embedded verification module",
     img: "/images/signupslider4.png",
     alt: "signupslider4",
+  },
+];
+
+export interface DashboardStat {
+  count: number;
+  label: string;
+  icon: string;
+  borderColor: string;
+  bgColor: string;
+}
+export const dashboardStats: DashboardStat[] = [
+  {
+    count: 12,
+    label: "ID Cards",
+    icon: "BsCreditCard2Front",
+    borderColor: "border-[#a46a3e]",
+    bgColor: "bg-[#a46a3e]/30",
+  },
+  {
+    count: 21,
+    label: "Organisations Joined",
+    icon: "Users",
+    borderColor: "border-[#3b66b0]",
+    bgColor: "bg-[#3b66b0]/30",
+  },
+  {
+    count: 16,
+    label: "Subscriptions",
+    icon: "CheckSquare",
+    borderColor: "border-[#a0558f]",
+    bgColor: "bg-[#a0558f]/30",
+  },
+  {
+    count: 4,
+    label: "Upcoming Events",
+    icon: "Calendar",
+    borderColor: "border-[#5ca394]",
+    bgColor: "bg-[#5ca394]/30",
   },
 ];

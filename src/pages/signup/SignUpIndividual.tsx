@@ -6,21 +6,21 @@ import { useEffect, useRef, useState } from "react";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { LuPhone } from "react-icons/lu";
 const SignUpIndividual = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const modalRef = useRef(null);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
   const handleClickOutside =
-    ((event) => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
+    (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
-    },
-    []);
+    };
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+    const listener = (event: MouseEvent) => handleClickOutside(event);
+    document.addEventListener("mousedown", listener);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", listener);
     };
   }, [handleClickOutside]);
 
@@ -224,12 +224,12 @@ const SignUpIndividual = () => {
                     </div>
                     <p className="font-inter font-normal text-sm 2xl:text-lg tracking-[0%] text-[#c7c6c6]">
                       I agree to the{" "}
-                      <Link className="underline">Terms & Conditions</Link> and{" "}
-                      <Link className="underline">Privacy Policy.</Link>
+                      <Link to='/termsandconditions' className="underline">Terms & Conditions</Link> and{" "}
+                      <Link to='/privacy-policy' className="underline">Privacy Policy.</Link>
                     </p>
                   </div>
 
-                  <Link>
+                  <Link to ="/dashboard">
                     <button className="w-full rounded-full bg-[#a324f2] py-[17px] px-[128px]">
                       <span className="font-montserrat font-semibold text-sm 2xl:text-base text-[#ffffff]">
                         Sign Up

@@ -6,8 +6,38 @@ import { PiChartBarThin } from "react-icons/pi";
 import { LuPhone, LuMapPin } from "react-icons/lu";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { HiOutlineEnvelope } from "react-icons/hi2";
-import { Country, State } from "country-state-city";
+import { Country, ICountry, IState, State } from "country-state-city";
 import { AiFillInfoCircle } from "react-icons/ai";
+
+interface FormData {
+  companyName: string;
+  companyPhone: string;
+  companyAddress: string;
+  selectedCountry: string;
+  selectedState: string;
+  companyEmail: string;
+  about: string;
+  accessType: string;
+  agreed: boolean;
+  fullName: string;
+  email: string;
+  phone: string;
+  password: string;
+  confirmPassword: string;
+  firstName: string;
+  lastName: string;
+  userPhone: string;
+  userAddress: string;
+  userCountry: string;
+  userState: string;
+  userEmail: string;
+  userAccessType: string;
+  userAgreed: boolean;
+  userFullName: string;
+  userPassword: string;
+  companyAdmin: boolean;
+}
+
 
 const ProgressBarOne = () => {
   return (
@@ -45,9 +75,9 @@ const ProgressBarTwo = () => {
 };
 
 const SignUpOrganization = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const modalRef = useRef(null);
-  const [formData, setFormData] = useState({
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const modalRef = useRef<HTMLDivElement | null>(null);
+  const [formData, setFormData] = useState<FormData>({
     //Page 1 - Organization Info
     companyName: "",
     companyPhone: "",
@@ -58,12 +88,12 @@ const SignUpOrganization = () => {
     about: "",
     accessType: "",
     agreed: false,
+    //Page 2 - User Info
     fullName: "",
     email: "",
     phone: "",
     password: "",
     confirmPassword: "",
-    //Page 2 - User Info
     firstName: "",
     lastName: "",
     userPhone: "",
@@ -77,7 +107,7 @@ const SignUpOrganization = () => {
     userPassword: "",
     companyAdmin: false,
   });
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState<number>(1);
 
   const isStepOneValid = () => {
     const {
@@ -104,13 +134,17 @@ const SignUpOrganization = () => {
     );
   };
 
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState<ICountry[]>([]);
   const [isAccessOpen, setIsAccessOpen] = useState(false);
-  const [states, setStates] = useState([]);
+  const [states, setStates] = useState<IState[]>([]);
   const accessOptions = ["Opened", "Semi Closed", "Closed"];
 
-  const handleAccessTypeChange = (option) => {
-    setFormData((prevData) => ({
+  interface AccessTypeChangeOption {
+    option: string;
+  }
+
+  const handleAccessTypeChange = (option: string): void => {
+    setFormData((prevData: FormData) => ({
       ...prevData,
       accessType: prevData.accessType === option ? "" : option,
     }));
@@ -126,7 +160,7 @@ const SignUpOrganization = () => {
     // }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form submitted:", formData);
@@ -150,12 +184,12 @@ const SignUpOrganization = () => {
   }, [formData.selectedCountry]);
 
   const handleClickOutside =
-    ((event) => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
+    (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
-    },
-    []);
+    };
+    
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -164,11 +198,13 @@ const SignUpOrganization = () => {
     };
   }, [handleClickOutside]);
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: type === "checkbox"
+        ? (e.target as HTMLInputElement).checked
+        : value,
     }));
   };
 
@@ -497,8 +533,8 @@ const SignUpOrganization = () => {
                         </label>
                         <p className="font-inter font-normal text-sm 2xl:text-lg tracking-[0%] text-[#c7c6c6]">
                           I agree to the{" "}
-                          <Link className="underline">Terms & Conditions</Link>{" "}
-                          and <Link className="underline">Privacy Policy.</Link>
+                          <Link to='/termsandconditions' className="underline">Terms & Conditions</Link>{" "}
+                          and <Link to='/privacy-policy' className="underline">Privacy Policy.</Link>
                         </p>
                       </div>
 

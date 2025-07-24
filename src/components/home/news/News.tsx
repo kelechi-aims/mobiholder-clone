@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { GoArrowUpRight } from "react-icons/go";
-import { blogs } from '../../../data';
+import { Blog, blogs } from '../../../data';
 
 const News = () => {
   return (
@@ -44,7 +44,7 @@ const News = () => {
             </div>
 
             <div className='flex flex-col max-h-[506px] overflow-y-auto scrollbar-thin scrollbar-track-[#031616] scrollbar-thumb-[#111b1f] scrollbar-thumb-rounded-[28px] scrollbar-track-rounded-[28px] gap-[60px] xl:gap-[85px] mt-[29px] mb-[69px]'>
-                {blogs.map((blog, index) => (
+                {blogs.map((blog: Blog, index) => (
                     <div key={index} className='flex flex-col px-10 xl:px-0 items-center md:flex-col xl:flex-row gap-[60px] relative'>
                         <img src={blog.img} alt={blog.alt} className='w-full mt-10 xl:mt-0 xl:max-w-[600px] xl:max-h-[300px]  h-auto rounded-[11px] xl:sticky bottom-[5%] ' />
 
@@ -64,7 +64,7 @@ const News = () => {
                                 <h2 className='font-inter font-medium text-[25px] leading-[35px] lg:text-3xl 2xl:text-[45px] 2xl:leading-[71px] text-white mt-9 lg:mt-[15px]'>{blog.title}</h2>
                                 <p className='font-inter font-medium text-[16px] leading-[30px] 2xl:text-[22px] 2xl:leading-[49px] text-white mt-[14px]'>{blog.desc}</p>
 
-                                <Link className='underline'><span className='font-inter text-left font-normal text-[16px] leading-[30px] lg:text-[22px] lg:leading-[49px] text-white flex items-center gap-[10px]'>See full case study <GoArrowUpRight /></span></Link>
+                                <Link to='/' className='underline'><span className='font-inter text-left font-normal text-[16px] leading-[30px] lg:text-[22px] lg:leading-[49px] text-white flex items-center gap-[10px]'>See full case study <GoArrowUpRight /></span></Link>
                             </div>
 
                         </div>

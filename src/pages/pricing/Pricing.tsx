@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import { RiRadioButtonLine } from "react-icons/ri";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import Navbar from '../../components/navbar/Navbar';
-import { pricing } from '../../data'
+import { pricing, PricingPlan } from '../../data'
 
 
 const Pricing = () => {
-    const [activeCard, setActiveCard] = useState(null);
+    const [activeCard, setActiveCard] = useState<number | null>(null);
 
-    const handleCardClick = (index) => {
+    const handleCardClick = (index: number) => {
         setActiveCard(index);
     };
 
@@ -33,7 +33,7 @@ const Pricing = () => {
                     </div>
 
                     <div className='flex justify-between px-0 lg:px-10 xl:px-0 flex-wrap gap-10 items-center'>
-                    {pricing.map((item, index) => (
+                    {pricing.map((item: PricingPlan, index) => (
                     <div 
                         key={index} 
                         className={`xl:w-[330px] 2xl:w-[380.297px] rounded-[32px] p-10 bg-pricing-card-bg backdrop-blur-[84px] border ${

@@ -40,14 +40,14 @@ const ResetPassword = () => {
                       </div>
                     </div>
                     <input
-                      type="text"
+                      type="email"
                       id="username"
                       required
                       className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full text-sm 2xl:text-lg"
                       placeholder="Enter your email to get a reset password link "
                     />
                     <div className="mt-7">
-                      <Link>
+                      <Link to='/resetpassword'>
                         <button className="w-full rounded-full bg-[#a324f2] py-[17px] px-[108px]">
                           <span className="font-montserrat font-semibold text-sm 2xl:text-base text-[#ffffff]">
                             Send password reset link

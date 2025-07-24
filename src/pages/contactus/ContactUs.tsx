@@ -12,7 +12,7 @@ const ContactUs = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!name || !location || !phoneNumber || !subject || !message) {
@@ -232,7 +232,6 @@ const ContactUs = () => {
                       Mesaage
                     </label>
                     <textarea
-                      type="text"
                       id="message"
                       name="message"
                       className="w-full rounded-[10px] py-[25px] px-[20px] text-[#89888d] text-base mb-10 xl:text-xs 2xl:text-base"

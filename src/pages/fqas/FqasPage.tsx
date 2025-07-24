@@ -1,33 +1,32 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Navbar from '../../components/navbar/Navbar';
 import { MdOutlineArrowRightAlt } from "react-icons/md";
-import { fqasData } from '../../data';
+import { Faq, FqasData, fqasData } from '../../data';
 import { IoIosArrowDown } from "react-icons/io";
 
 const FqasPage = () => {
-  const [selectedFqas, setSelectedFqas] = useState(fqasData[0]);
-  const [activeIndex, setActiveIndex] = useState(null);
-  const accordionRef = useRef(null);
+  const [selectedFqas, setSelectedFqas] = useState<FqasData>(fqasData[0]);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const accordionRef = useRef<HTMLDivElement | null>(null);
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const handleFqasClick = (index) => {
+  const handleFqasClick = (index: number) => {
     setSelectedFqas(fqasData[index]);
   }
 
   // handle clicks outside
-  const handleClickOutside = (event) => {
-    if (accordionRef.current && !accordionRef.current.contains(event.target)) {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (accordionRef.current && !accordionRef.current.contains(event.target as Node)) {
       setActiveIndex(null);
     }
   }
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside as EventListener);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside as EventListener);
     };
   }, [])
 

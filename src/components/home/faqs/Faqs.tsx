@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { faqs } from '../../../data'
+import { Faq, faqs } from '../../../data'
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
 const Faqs = () => {
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-    const toggleAccordion = (index) => {
+    const toggleAccordion = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
@@ -21,7 +21,7 @@ const Faqs = () => {
                 `}>Frequently Asked Questions</h2>
 
                 <div className='mb-[30px]'>
-                    {faqs.map((faq, index) => (
+                    {faqs.map((faq: Faq, index) => (
                         <div key={index}
                             className='border-b border-[#Ec3c3c3] py-6 last:border-b-0'
                         >
@@ -47,7 +47,7 @@ const Faqs = () => {
 
                 
             </div>
-            <button className=' bg-[#205dc8] py-[9px] px-[41px] font-grifter rounded-[100px] font-bold text-white text-[18px] leading-[49px]'><Link>See All</Link></button> 
+            <button className=' bg-[#205dc8] py-[9px] px-[41px] font-grifter rounded-[100px] font-bold text-white text-[18px] leading-[49px]'><Link to='/'>See All</Link></button> 
             
         </div>
     </div>

@@ -4,22 +4,22 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
   const location = useLocation();
 
   // Detects clicks outside and close dropdown
   const handleClickOutside =
-    ((event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+    (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false);
       }
-    },
-    []);
+    }
+  ;
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside as EventListener);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside as EventListener);
     };
   }, [handleClickOutside]);
 
@@ -78,34 +78,10 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Hamburger Menu for Small Screens */}
-        <div className="lg:hidden relative" ref={menuRef}>
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          </button>
-        </div>
-
         {/* Mobile & Tablet Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-[18px] right-0 z-50">
-            <div className="absolute top-0 right-0 mt-12 w-48 bg-white rounded-lg shadow-lg">
+          <div className="lg:hidden fixed top-0 right-0 z-50 h-screeb max-h-full max-w-[200px]">
+            <div className="top-0 right-0 mt-0 w-52 bg-white rounded-lg shadow-lg overflow-auto ">
               <div className="py-2">
                 {navLinks.map((link, index) => (
                   <Link
@@ -135,6 +111,32 @@ const Navbar = () => {
             </div>
           </div>
         )}
+
+        {/* Hamburger Menu for Small Screens */}
+        <div className="lg:hidden relative" ref={menuRef}>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white focus:outline-none text-xl"
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        
       </div>
     </div>
   );

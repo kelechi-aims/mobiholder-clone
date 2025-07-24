@@ -5,7 +5,7 @@ const About = () => {
   const [selectedAbout, setSelectedAbout] = useState(managerialControl[0].id);
 
   // Handle about section change
-  const handleAboutClick = (aboutId) => {
+  const handleAboutClick = (aboutId: number) => {
     setSelectedAbout(aboutId);
   };
   return (

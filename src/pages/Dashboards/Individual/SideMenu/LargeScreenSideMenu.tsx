@@ -9,17 +9,20 @@ import { AiOutlineLogout } from "react-icons/ai";
 import { useState } from "react";
 import { FiSun } from "react-icons/fi";
 import { IoMoonOutline } from "react-icons/io5";
-const SideMenu = () => {
-  const [active, setActive] = useState("Dashboard");
+import { MdOutlineSubscriptions } from "react-icons/md";
 
-  const menu = [
+export const menu = [
     {
       name: "Dashboard",
       icon: <CgHome />,
     },
     {
-      name: "Membership & Subscription",
+      name: "Membership",
       icon: <RiFileCheckLine />,
+    },
+    {
+      name: "Subscription",
+      icon: <MdOutlineSubscriptions />,
     },
     {
       name: "ID Cards",
@@ -41,7 +44,13 @@ const SideMenu = () => {
       name: "Settings",
       icon: <IoSettingsOutline />,
     },
-  ];
+]
+
+export const MobileScreenSideMenu = () => {}
+export const LargeScreenSideMenu = () => {
+  const [active, setActive] = useState("Dashboard");
+
+  ;
   return (
     <div className="rounded-[14px] bg-[#15171e] opacity-100">
       <div className="mx-4">
@@ -107,4 +116,4 @@ const SideMenu = () => {
   );
 };
 
-export default SideMenu;
+
