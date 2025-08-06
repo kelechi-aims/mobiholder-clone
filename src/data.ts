@@ -78,13 +78,13 @@ export const managerialControl: ManagerialControlItem[] = [
         src: "/images/about-img1.png",
         alt: "about-img1",
         className:
-          "absolute xl:max-w-[40%] max-w-[35%] xl:max-h-[50%] max-h-[35%] lg:top-[80%] lg:left-[9%] xl:top-[78%] xl:left-[5%] right-[10%] right-[9%] top-[62%] md:top-[66%] ",
+          "absolute xl:max-w-[40%] md:max-w-[35%] max-w-[40%] max-h-[40%] xl:max-h-[50%] md:max-h-[35%] lg:top-[80%] lg:left-[9%] xl:top-[78%] xl:left-[5%] right-[30%] md:right-[9%] top-[66.5%] md:top-[64%] ",
       },
       {
         src: "/images/about-img2.png",
         alt: "about-img2",
         className:
-          "absolute xl:max-w-[40%] xl:max-h-[35%] max-w-[35%] max-h-[35%] lg:top-[79%] lg:right-[7%] xl:top-[77%] right-[7%] md:right-[5%] top-[81%] md:top-[83%]",
+          "absolute xl:max-w-[40%] xl:max-h-[35%] max-w-[40%] max-h-[40%] md:max-w-[35%] md:max-h-[35%] lg:top-[79%] lg:right-[7%] xl:top-[77%] right-[30%] md:right-[5%] top-[90%] md:top-[83%]",
       },
     ],
   },
@@ -110,13 +110,13 @@ export const managerialControl: ManagerialControlItem[] = [
         src: "/images/event1.png",
         alt: "event1",
         className:
-          "absolute xl:max-w-[22%] xl:max-h-[22%] max-w-[21%] xl:top-[78%] xl:left-[15%] max-h-[13%] lg:top-[81%] lg:left-[15%] right-[15%] md:right-[13%] top-[66%] md:top-[67%]",
+          "absolute xl:max-w-[22%] xl:max-h-[22%] md:max-w-[21%] max-h-[13%] max-w-[25%] xl:top-[78%] xl:left-[15%] lg:top-[81%] lg:left-[15%] right-[38%] md:right-[13%] top-[68%] md:top-[67%]",
       },
       {
         src: "/images/event2.png",
         alt: "event2",
         className:
-          "absolute xl:max-w-[40%] xl:max-h-[40%] max-w-[35%] max-h-[35%] lg:top-[80%] lg:right-[9%] xl:top-[78%] xl:right-[5%] right-[7%] right-[10%] md:right-[7%] top-[84%] md:top-[84%]",
+          "absolute xl:max-w-[40%] xl:max-h-[40%] md:max-w-[35%] max-w-[45%] max-h-[35%] lg:top-[80%] lg:right-[9%] xl:top-[78%] xl:right-[5%] right-[7%] right-[28%] md:right-[7%] top-[91%] md:top-[84%]",
       },
     ],
   },
@@ -142,13 +142,13 @@ export const managerialControl: ManagerialControlItem[] = [
         src: "/images/memsub1.png",
         alt: "memsub1",
         className:
-          "absolute xl:max-w-[25%] xl:max-h-[25%] max-w-[30%] max-h-[30%] lg:top-[81%] lg:left-[13%] xl:top-[80%] xl:left-[12%] right-[10%] md:right-[11%] top-[53%] md:top-[58%]",
+          "absolute xl:max-w-[25%] xl:max-h-[25%] md:max-w-[30%] max-w-[35%] max-h-[30%] lg:top-[81%] lg:left-[13%] xl:top-[80%] xl:left-[12%] right-[32%] md:right-[11%] top-[66%] md:top-[58%]",
       },
       {
         src: "/images/memsub2.png",
         alt: "memsub2",
         className:
-          "absolute xl:max-w-[23%] xl:max-h-[23%] max-w-[22%] max-h-[23%] lg:top-[80%] lg:right-[16%] 2xl:top-[75%] xl:top-[78%] xl:right-[16%] right-[14%] md:right-[13%] top-[76%] md:top-[79%]",
+          "absolute xl:max-w-[23%] xl:max-h-[23%] md:max-w-[22%] max-w-[30%] max-h-[23%] lg:top-[80%] lg:right-[16%] 2xl:top-[75%] xl:top-[78%] xl:right-[16%] right-[35%] md:right-[13%] top-[88%] md:top-[79%]",
       },
     ],
   },

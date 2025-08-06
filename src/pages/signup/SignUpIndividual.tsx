@@ -26,11 +26,11 @@ const SignUpIndividual = () => {
 
   return (
     <div className="">
-      <div className="flex justify-center items-center xl:justify-between bg-[#0d0d0d] h-screen w-full md:overflow-y-auto">
-        <div className="hidden xl:block lg:w-[40%] xl:w-[33%] fixed overflow-hidden">
+      <div className="flex justify-center items-center xl:justify-between bg-[#0d0d0d] w-full xl:h-screen md:overflow-y-auto">
+        <div className="hidden xl:block lg:w-[40%] xl:w-[33%] fixed top-0 overflow-hidden">
           <SignUpSlider />
         </div>
-        <div className="w-full flex justify-center items-center xl:ml-[40%] lg:py-16 md:pt-[300px] lg:pt-[300px] ">
+        <div className="w-full flex justify-center items-center px-2 md:px-0 xl:ml-[40%] py-16 ">
           <div className="flex flex-col">
             <div className="w-full xl:w-min">
               <div className="flex justify-between items-center pb-12">
@@ -58,11 +58,11 @@ const SignUpIndividual = () => {
               {/* <div>Organization</div> */}
               <div className="relative p-[1px] bg-signup-bdr rounded-[7px]">
                 <form className="bg-[#0d0d0d] rounded-[7px] p-9">
-                  <h3 className="font-montserrat font-medium text-lg lg:text-xl 2xl:text-2xl tracking-[-3%] text-[#ffffff] pb-4">
+                  <h3 className="font-montserrat font-medium text-base md:text-lg lg:text-xl 2xl:text-2xl tracking-[-3%] text-[#ffffff] pb-4">
                     Sign Up as Individual
                   </h3>
 
-                  <div className="flex pb-4 gap-10">
+                  <div className="flex flex-col md:flex-row pb-4 gap-10">
                     <div>
                       <label
                         htmlFor="fname"
@@ -81,7 +81,7 @@ const SignUpIndividual = () => {
                         type="text"
                         id="fname"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full md:w-[250px] text-sm 2xl:text-lg"
                         placeholder="Enter your first name"
                       />
                     </div>
@@ -104,13 +104,13 @@ const SignUpIndividual = () => {
                         type="text"
                         id="lname"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full md:w-[250px] text-sm 2xl:text-lg"
                         placeholder="Enter your last name"
                       />
                     </div>
                   </div>
 
-                  <div className="flex pb-4 gap-10">
+                  <div className="flex flex-col md:flex-row pb-4 gap-10">
                     <div>
                       <label
                         htmlFor="email"
@@ -129,7 +129,7 @@ const SignUpIndividual = () => {
                         type="email"
                         id="email"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full md:w-[250px] text-sm 2xl:text-lg"
                         placeholder="Enter your email"
                       />
                     </div>
@@ -152,7 +152,7 @@ const SignUpIndividual = () => {
                         type="text"
                         id="phone"
                         required
-                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
+                        className="bg-[#2e2f36] pl-10 py-5 rounded-[10px] text-[#999797] w-full md:w-[250px] text-sm 2xl:text-lg"
                         placeholder="Enter your phone number"
                       />
                     </div>
@@ -222,7 +222,7 @@ const SignUpIndividual = () => {
                         ></path>
                       </svg>
                     </div>
-                    <p className="font-inter font-normal text-sm 2xl:text-lg tracking-[0%] text-[#c7c6c6]">
+                    <p className="font-inter font-normal text-[10px] md:text-sm 2xl:text-lg tracking-[0%] text-[#c7c6c6]">
                       I agree to the{" "}
                       <Link to='/termsandconditions' className="underline">Terms & Conditions</Link> and{" "}
                       <Link to='/privacy-policy' className="underline">Privacy Policy.</Link>
@@ -230,7 +230,7 @@ const SignUpIndividual = () => {
                   </div>
 
                   <Link to ="/dashboard">
-                    <button className="w-full rounded-full bg-[#a324f2] py-[17px] px-[128px]">
+                    <button className="w-full rounded-full bg-[#a324f2] py-[17px] px-[80px] md:px-[128px]">
                       <span className="font-montserrat font-semibold text-sm 2xl:text-base text-[#ffffff]">
                         Sign Up
                       </span>

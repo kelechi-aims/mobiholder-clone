@@ -71,49 +71,49 @@ const Navbar = () => {
               Login
             </button>
           </Link>
-          <Link to="/signup">
+          {/* <Link to="/signup">
             <button className="py-[3px] px-[47px] lg:px-[30px] border rounded-full border-purple font-semibold text-base  2xl:text-base text-center text-white bg-purple">
               Sign up
             </button>
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile & Tablet Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed top-0 right-0 z-50 h-screeb max-h-full max-w-[200px]">
-            <div className="top-0 right-0 mt-0 w-52 bg-white rounded-lg shadow-lg overflow-auto ">
-              <div className="py-2">
+          <div 
+            ref={menuRef}
+            className="lg:hidden fixed top-0 right-0 z-[9999] h-screen w-60 bg-white shadow-lg transition-transform duration-300">
+            <div className="flex flex-col mt-16 space-y-4">
                 {navLinks.map((link, index) => (
                   <Link
                     key={index}
                     to={link.path}
-                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    className="block px-6 py-3 text-gray-800 hover:bg-purple"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
                   </Link>
                 ))}
               </div>
-              <div className="py-2">
-                <Link to="/login">
+              <div className="mt-auto flex flex-col space-y-4 px-6 mb-6">
+                <Link to="/login" onClick={() => setIsMenuOpen(false)}>
                   <button
-                    className={`block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200`}
+                    className={`w-full py-3 text-left text-gray-800 hover:bg-purple`}
                   >
                     Login
                   </button>
                 </Link>
-                <Link to="/signup">
-                  <button className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200">
+                {/* <Link to="/signup" onClick={() => setIsMenuOpen(false)}>
+                  <button className="w-full py-3 text-left text-gray-800 hover:bg-purple">
                     Sign up
                   </button>
-                </Link>
-              </div>
-            </div>
+                </Link> */}
+            </div>  
           </div>
         )}
 
         {/* Hamburger Menu for Small Screens */}
-        <div className="lg:hidden relative" ref={menuRef}>
+        <div className="lg:hidden relative" >
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white focus:outline-none text-xl"

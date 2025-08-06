@@ -12,7 +12,7 @@ const Login = () => {
           <SignUpSlider />
         </div>
         <div className="w-full flex items-center justify-center min-h-screen xl:py-16 lg:w-[60%] lg:ml-[40%]">
-          <div className="flex justify-center flex-col w-[65%]">
+          <div className="flex justify-center flex-col w-[90%] md:w-[65%]">
             <div className="pb-12">
               <Link to="/">
                 <img

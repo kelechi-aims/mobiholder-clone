@@ -14,10 +14,12 @@ const Faqs = () => {
     <div className='flex justify-center py-[80px]'>
         <div className="container mx-auto px-8 md:px-0 xl:px-0 xll:px-8 2xl:px-0 flex flex-col justify-center items-center">
             <div className='w-[80%]'>
-                <h2 className={`font-grifter font-bold text-[#061f25] text-center text-[40px] leading-[60px]
-                    md:text-[50px] md:leading-[60px]
-                    lg:-text-[60] lg:leading-[80px]
-                    xll:text-[70px] xll:leading-[114.84px] 
+                <h2 className={`font-grifter font-bold text-[#061f25] text-center text-[24px] leading-[41px]
+                    md:text-[40px] md:leading-[46px]
+                    lg:text-[46px] lg:leading-[47px]
+                    xl:text-[47.96px] xl:leading-[48.84px] 
+                    xls:text-[49.96px] xls:leading-[49.84px] 
+                    2xl:text-[70.96px] 2xl:leading-[80.84px] 
                 `}>Frequently Asked Questions</h2>
 
                 <div className='mb-[30px]'>
@@ -27,7 +29,7 @@ const Faqs = () => {
                         >
                             <button
                                 onClick={() => toggleAccordion(index)}
-                                className='flex items-center justify-between w-full text-left focus:outline-none font-inter font-medium text-lg lg:text-xl 2xl:text-[28px] 2xl:leading-[49px]'
+                                className='flex items-center justify-between w-full text-left focus:outline-none font-inter font-medium text-[12px] md:text-lg lg:text-xl 2xl:text-[28px] 2xl:leading-[49px]'
                             >
                                 {faq.question}
                                 <span className={`transform transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}>
@@ -36,7 +38,7 @@ const Faqs = () => {
                             </button>
 
                             {activeIndex === index && (
-                                <div className='mt-2 text-gray-600 text-[22px] leadig-[49px] '>
+                                <div className='mt-2 text-gray-600 text-[12px] md:text-[22px] leadig-[49px] '>
                                     {faq.answer}
                                 </div>
             
@@ -47,7 +49,7 @@ const Faqs = () => {
 
                 
             </div>
-            <button className=' bg-[#205dc8] py-[9px] px-[41px] font-grifter rounded-[100px] font-bold text-white text-[18px] leading-[49px]'><Link to='/'>See All</Link></button> 
+            <button className=' bg-[#205dc8] py-[5px] md:py-[9px] px-[35px] md:px-[41px] font-grifter rounded-[100px] font-bold text-white text-[14px] md:text-[18px] leading-[49px]'><Link to='/'>See All</Link></button> 
             
         </div>
     </div>

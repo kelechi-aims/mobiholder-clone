@@ -36,7 +36,12 @@ const ContactUs = () => {
         <div className="container mx-auto px-8 md:px-0 lg:px-8 xll:px-8 2xl:px-0">
           <h1
             className={`pt-[219px] font-grifter font-bold text-white pb-[105px]
-            text-[70px] leading-[114.8px]`}
+            text-[30.96px] leading-[40.84px]
+            md:text-[40.96px] md:leading-[45.84px]
+            lg:text-[45.96px] lg:leading-[47.84px]
+            xl:text-[47.96px] xl:leading-[48.84px] 
+            xls:text-[49.96px] xls:leading-[49.84px] 
+            2xl:text-[70.96px] 2xl:leading-[80.84px]`}
           >
             Contact Us
           </h1>
@@ -45,38 +50,38 @@ const ContactUs = () => {
 
       <div>
         <div className="container mx-auto px-8 md:px-0 lg:px-8 xll:px-8 2xl:px-0 my-[106px]">
-          <div className="border-2 rounded-[38px] border-[#2e2f36] bg-[#0d151d] px-[52px] py-[63px]">
+          <div className="border-2 rounded-[38px] border-[#2e2f36] bg-[#0d151d] px-10 md:px-[52px] py-[40px] md:py-[63px]">
             <div className="xl:flex justify-between">
-              <div className="rounded-[30px] bg-contactus-bg w-full mb-14 xl:mb-0 xl:w-[40%] p-10">
+              <div className="rounded-[30px] bg-contactus-bg w-full mb-14 xl:mb-0 xl:w-[40%] p-6 md:p-10">
                 <h4
-                  className={`font-grifter font-bold text-[40px] leading-[114.84px] text-white
+                  className={`font-grifter font-bold text-[19px] md:text-[30px] leading-[60.84px] text-white
                   xl:text-[34px]
                   2xl:text-[40px] `}
                 >
                   Contact Information
                 </h4>
                 <p
-                  className={`font-inter font-normal text-[22px] leading-[35px] text-[#e9e8e8]
+                  className={`font-inter font-normal text-sm md:text-[20px] leading-[25px] md:leading-[35px] text-[#e9e8e8]
                   xl:text-[16px]
                   2xl:text-[22px] `}
                 >
                   We are here to help make your experience convenient and
                   smooth, shoot us a mail today
                 </p>
-                <div className="flex items-center gap-11 mt-6">
-                  <div className="text-white text-6xl xl:text-4xl 2xl:text-6xl">
+                <div className="flex items-center gap-6 md:gap-11 mt-4 md:mt-6">
+                  <div className="text-white text-2xl md:text-6xl xl:text-4xl 2xl:text-6xl">
                     <BsFillTelephoneFill />
                   </div>
                   <div>
                     <p
-                      className={`font-inter font-medium text-[22px] leading-[44px] text-[#fefefe]
+                      className={`font-inter font-medium text-sm md:text-[22px] leading-[44px] text-[#fefefe]
                       xl:text-[16px]
                       2xl:text-[22px] `}
                     >
                       0700 000 0000
                     </p>
                     <p
-                      className={`font-inter font-medium text-[22px] leading-[44px] text-[#fefefe]
+                      className={`font-inter font-medium text-sm md:text-[22px] leading-[44px] text-[#fefefe]
                       xl:text-[16px]
                       2xl:text-[22px] `}
                     >
@@ -85,20 +90,20 @@ const ContactUs = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-11 mt-6">
-                  <div className="text-white text-6xl xl:text-4xl 2xl:text-6xl">
+                <div className="flex items-center gap-6 md:gap-11 mt-1 md:mt-6">
+                  <div className="text-white text-2xl md:text-6xl xl:text-4xl 2xl:text-6xl">
                     <FaEnvelope />
                   </div>
                   <div>
                     <p
-                      className={`font-inter font-medium text-[22px] leading-[44px] text-[#fefefe]
+                      className={`font-inter font-medium text-sm md:text-[22px] leading-[44px] text-[#fefefe]
                       xl:text-[16px]
                       2xl:text-[22px] `}
                     >
                       infomobiholder@gmail.com
                     </p>
                     <p
-                      className={`font-inter font-medium text-[22px] leading-[44px] text-[#fefefe]
+                      className={`font-inter font-medium text-sm md:text-[22px] leading-[44px] text-[#fefefe]
                       xl:text-[16px]
                       2xl:text-[22px] `}
                     >
@@ -107,20 +112,20 @@ const ContactUs = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-11 mt-6">
-                  <div className="text-white text-6xl xl:text-4xl 2xl:text-6xl ">
+                <div className="flex items-center gap-6 md:gap-11 mt-1 md:mt-6">
+                  <div className="text-white text-2xl md:text-6xl xl:text-4xl 2xl:text-6xl ">
                     <FaLocationDot />
                   </div>
                   <div>
                     <p
-                      className={`font-inter font-medium text-[22px] leading-[44px] text-[#fefefe]
+                      className={`font-inter font-medium text-sm md:text-[22px] leading-[44px] text-[#fefefe]
                       xl:text-[16px]
                       2xl:text-[22px] `}
                     >
                       Lekki , Lagos
                     </p>
                     <p
-                      className={`font-inter font-medium text-[22px] leading-[44px] text-[#fefefe]
+                      className={`font-inter font-medium text-sm md:text-[22px] leading-[44px] text-[#fefefe]
                       xl:text-[16px]
                       2xl:text-[22px] `}
                     >
@@ -135,14 +140,14 @@ const ContactUs = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className={`mb-2 block font-inter font-normal text-lg tracking-tight text-white focus:outline-none
+                      className={`mb-2 block font-inter font-normal text-base md:text-lg tracking-tight text-white focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                     >
                       Name
                     </label>
                     <div className="relative">
-                      <div className="absolute inset-y-[35px] left-5 flex items-center pointer-events-none text-[#89888d] text-base z-10">
+                      <div className="absolute inset-y-[23px] md:inset-y-[35px] left-6 md:left-5 flex items-center pointer-events-none text-[#89888d] text-base z-10">
                         <AiOutlineUser />
                       </div>
                     </div>
@@ -150,7 +155,7 @@ const ContactUs = () => {
                       type="text"
                       id="name"
                       name="name"
-                      className="w-full rounded-[10px] py-[25px] px-[45px] text-[#89888d] text-base xl:text-xs 2xl:text-base"
+                      className="w-full rounded-[10px] py-[15px] md:py-[25px] px-[45px] text-[#89888d] text-sm md:text-base xl:text-xs 2xl:text-base"
                       placeholder="Enter your full name"
                       required
                       value={name}
@@ -161,7 +166,7 @@ const ContactUs = () => {
                   <div>
                     <label
                       htmlFor="location"
-                      className={`mb-2 block font-inter font-normal text-lg tracking-tight text-white focus:outline-none
+                      className={`mb-2 block font-inter font-normal text-base md:text-lg tracking-tight text-white focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                     >
@@ -171,7 +176,7 @@ const ContactUs = () => {
                       type="text"
                       id="location"
                       name="location"
-                      className="w-full rounded-[10px] py-[25px] px-[20px] text-[#89888d] text-base xl:text-xs 2xl:text-base"
+                      className="w-full rounded-[10px] py-[15px] md:py-[25px] px-[20px] text-[#89888d] text-sm md:text-base xl:text-xs 2xl:text-base"
                       placeholder="Choose your location"
                       required
                       value={location}
@@ -182,7 +187,7 @@ const ContactUs = () => {
                   <div>
                     <label
                       htmlFor="phone"
-                      className={`mb-2 block font-inter font-normal text-lg tracking-tight text-white focus:outline-none
+                      className={`mb-2 block font-inter font-normal text-base md:text-lg tracking-tight text-white focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                     >
@@ -192,7 +197,7 @@ const ContactUs = () => {
                       type="tel"
                       id="phone"
                       name="phone"
-                      className="w-full rounded-[10px] py-[25px] px-[20px] text-[#89888d] text-base xl:text-xs 2xl:text-base"
+                      className="w-full rounded-[10px] py-[15px] md:py-[25px] px-[20px] text-[#89888d] text-sm md:text-base xl:text-xs 2xl:text-base"
                       placeholder="Enter your phone number"
                       required
                       pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
@@ -204,7 +209,7 @@ const ContactUs = () => {
                   <div>
                     <label
                       htmlFor="subject"
-                      className={`mb-2 block font-inter font-normal text-lg tracking-tight text-white focus:outline-none
+                      className={`mb-2 block font-inter font-normal text-base md:text-lg tracking-tight text-white focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                     >
@@ -214,7 +219,7 @@ const ContactUs = () => {
                       type="text"
                       id="subject"
                       name="subject"
-                      className="w-full rounded-[10px] py-[25px] px-[20px] text-[#89888d] text-base xl:text-xs 2xl:text-base"
+                      className="w-full rounded-[10px] py-[15px] md:py-[25px] px-[20px] text-[#89888d] text-sm md:text-base xl:text-xs 2xl:text-base"
                       placeholder="Enter the subject of your message"
                       required
                       value={subject}
@@ -225,7 +230,7 @@ const ContactUs = () => {
                   <div>
                     <label
                       htmlFor="message"
-                      className={`mb-2 block font-inter font-normal text-lg tracking-tight text-white focus:outline-none
+                      className={`mb-2 block font-inter font-normal text-base md:text-lg tracking-tight text-white focus:outline-none
                         xl:text-base
                         2xl:text-lg`}
                     >
@@ -234,7 +239,7 @@ const ContactUs = () => {
                     <textarea
                       id="message"
                       name="message"
-                      className="w-full rounded-[10px] py-[25px] px-[20px] text-[#89888d] text-base mb-10 xl:text-xs 2xl:text-base"
+                      className="w-full rounded-[10px] py-[15px] md:py-[25px] px-[20px] text-[#89888d] text-base mb-10 xl:text-xs 2xl:text-base"
                       placeholder="Enter your message"
                       rows={8}
                       required
@@ -244,7 +249,7 @@ const ContactUs = () => {
                   </div>
 
                   <div>
-                    <button className="w-full bg-[#a324f2] text-white text-base xl:text-xl font-bold font-grifter rounded-[100px] flex items-center gap-[10px] justify-center py-[21px]">
+                    <button className="w-full bg-[#a324f2] text-white text-sm md:text-base xl:text-xl font-bold font-grifter rounded-[100px] flex items-center gap-[10px] justify-center py-[16px] md:py-[21px]">
                       Send Message <MdOutlineArrowRightAlt />
                     </button>
                   </div>

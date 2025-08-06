@@ -56,6 +56,7 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "/use-cases", element: <Home /> },
       { path: "/pricing", element: <Pricing /> },
       { path: "/fqas", element: <FqasPage /> },
       { path: "/contactus", element: <ContactUs /> },

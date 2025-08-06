@@ -8,23 +8,25 @@ const Features = () => {
         <div className='container mx-auto px-8 xll:px-8 2xl:px-0 z-10'>
            
             <div className='relative'>
-                <img src="/images/ellipse.png" alt="ellipse" className='max-w-[] relative '/>
-                <div className={`w-[50%] md:w-[60%] flex flex-col justify-center items-center absolute top-[42.5%] left-[23%] xl:left-[17.5%] `}>
-                    <h3 className={`font-grifter font-bold text-center text-white text-[40px] leading-[60px]
-                        lg:text-[55px] lg:leading-[75px]
-                        xl:text-[70px] xl:leading-[90px]
+                <img src="/images/ellipse.png" alt="ellipse" className=' relative '/>
+                <div className={`w-[70%] md:w-[60%] flex flex-col justify-center items-center absolute top-[42.5%] left-[14%] md:left-[19%] xl:left-[17.5%] `}>
+                    <h3 className={`font-grifter font-bold text-center text-white text-[24px] leading-[41px] md:text-[40px] md:leading-[46px]
+                        lg:text-[46px] lg:leading-[47px]
+                        xl:text-[47.96px] xl:leading-[48.84px] 
+                        xls:text-[49.96px] xls:leading-[49.84px] 
+                        2xl:text-[70.96px] 2xl:leading-[80.84px]
                     `}>Why Individuals and SMEs choose us</h3>
-                    <p className={`w-[80%] lg:w-[60%] xl:w-[58%] 2xl:w-[50%] font-inter font-normal text-xs xl:text-base text-center text-[#afb3ca]`}>With MobiHolder you get the feeling that comes with being in control. Manage everything from one app today!</p>
+                    <p className={`w-[80%] lg:w-[60%] xl:w-[58%] 2xl:w-[50%] font-inter font-normal text-[10px] md:text-[12px] lg:text-base text-center text-[#afb3ca]`}>With MobiHolder you get the feeling that comes with being in control. Manage everything from one app today!</p>
                 </div>
             </div>
 
-            <div className='flex flex-col justify-center items-center gap-[60px] mb-[120px] px-0 xll:px-0'>
+            <div className='flex flex-col justify-center items-center gap-[60px] mt-[80px] md:mt-[0] mb-[120px] px-0 xll:px-0'>
                 <div className='flex justify-between items-center flex-col w-full lg:flex-row lg:flex-wrap gap-16 lg:gap-8'>
                     {featuresData.map((feature: FeaturesData) => (
                         <div 
                             key={feature.id} 
                             className={`px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent 
-                                bg-gradient-to-br-feat-card-bdr inline-flex flex-col justify-center gap-[23px] py-[50px] w-full h-[636px]
+                                bg-gradient-to-br-feat-card-bdr inline-flex flex-col justify-center gap-[23px] py-[50px] w-full 
                                 lg:w-[290px] lg:h-[490px]
                                 xl:w-[350px] xl:h-[490px]
                                 xll:w-[410px]
@@ -46,7 +48,7 @@ const Features = () => {
                 <div className='flex flex-wrap justify-between gap-16 xl:gap-8 w-full'>
                     <div className={`px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent
                         border-feat-card-bdr flex flex-col lg:flex-row justify-around lg:justify-center lg:items-center gap-[23px] lg:py-[50px] 
-                        w-full h-[636px]
+                        w-full h-[500px] md:h-[636px]
                         lg:w-[950px] lg:h-full
                         xl:w-[780px] xl:h-full
                         xll:w-[900px]
@@ -60,7 +62,7 @@ const Features = () => {
                     </div>
 
                     <div className={`max-h-max px-[30px] border bg-feature-card border-solid rounded-[20px] bg-clip-border border-transparent border-feat-card-bdr 
-                        flex flex-row w-full justify-between 
+                        flex flex-col md:flex-row w-full justify-between 
                         xl:flex-col xl:justify-center xl:w-[350px]
                         xll:w-[410px] 2xl:w-[470px]
                         gap-[23px] py-[51px] xll:py-[40px] 2xl:py-[28px]
@@ -79,7 +81,7 @@ const Features = () => {
         </div>
 
         <div className={`bg-[#101223] border rounded-[32px] border-solid bg-clip-border border-transparent border-feature-border backdrop-blur-[13.4px]
-             absolute left-0 h-[3325px] lg:h-[1511px] xl:h-[1432px] xll:h-[1488px] 2xl:h-[1493px] w-full mt-32
+             absolute left-0 h-[2863.72px] md:h-[3325px] lg:h-[1511px] xl:h-[1432px] xll:h-[1488px] 2xl:h-[1493px] w-full mt-11 md:mt-32
             `}></div>
 
     </div>

@@ -210,7 +210,7 @@ const SignUpOrganization = () => {
 
   return (
     <div className="">
-      <div className="flex justify-center items-center xl:justify-between bg-[#0d0d0d] h-screen w-full md:overflow-y-auto">
+      <div className="flex justify-center items-center xl:justify-between bg-[#0d0d0d] xl:h-screen w-full md:overflow-y-auto">
         <div className="hidden xl:block lg:w-[40%] xl:w-[33%] fixed overflow-hidden">
           <SignUpSlider />
         </div>
@@ -326,7 +326,7 @@ const SignUpOrganization = () => {
                           onChange={handleChange}
                         />
                       </div>
-                      <div className="flex pb-4 gap-10">
+                      <div className="flex flex-col md:flex-row pb-4 gap-10">
                         <div>
                           <label
                             htmlFor="country"
@@ -344,7 +344,7 @@ const SignUpOrganization = () => {
                           <select
                             name="country"
                             id="country"
-                            className="bg-[#2e2f36] px-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
+                            className="bg-[#2e2f36] px-10 py-5 rounded-[10px] text-[#999797] w-full md:w-[250px] text-sm 2xl:text-lg"
                             value={formData.selectedCountry}
                             onChange={(e) =>
                               setFormData((prev) => ({
@@ -385,7 +385,7 @@ const SignUpOrganization = () => {
                           <select
                             name="state"
                             id="state"
-                            className="bg-[#2e2f36] px-10 py-5 rounded-[10px] text-[#999797] w-[250px] text-sm 2xl:text-lg"
+                            className="bg-[#2e2f36] px-10 py-5 rounded-[10px] text-[#999797] w-full md:w-[250px] text-sm 2xl:text-lg"
                             value={formData.selectedState}
                             onChange={(e) =>
                               setFormData((prev) => ({
