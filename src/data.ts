@@ -36,7 +36,7 @@ export interface Faq {
   answer: string;
 }
 
-export interface FqasData{
+export interface FqasData {
   type: string;
   content: Faq[];
 }
@@ -510,43 +510,5 @@ export const signupslider: SignupSlider[] = [
     desc: "Manage access control, and assign people to handle event access with our embedded verification module",
     img: "/images/signupslider4.png",
     alt: "signupslider4",
-  },
-];
-
-export interface DashboardStat {
-  count: number;
-  label: string;
-  icon: string;
-  borderColor: string;
-  bgColor: string;
-}
-export const dashboardStats: DashboardStat[] = [
-  {
-    count: 12,
-    label: "ID Cards",
-    icon: "BsCreditCard2Front",
-    borderColor: "border-[#a46a3e]",
-    bgColor: "bg-[#a46a3e]/30",
-  },
-  {
-    count: 21,
-    label: "Organisations Joined",
-    icon: "Users",
-    borderColor: "border-[#3b66b0]",
-    bgColor: "bg-[#3b66b0]/30",
-  },
-  {
-    count: 16,
-    label: "Subscriptions",
-    icon: "CheckSquare",
-    borderColor: "border-[#a0558f]",
-    bgColor: "bg-[#a0558f]/30",
-  },
-  {
-    count: 4,
-    label: "Upcoming Events",
-    icon: "Calendar",
-    borderColor: "border-[#5ca394]",
-    bgColor: "bg-[#5ca394]/30",
   },
 ];

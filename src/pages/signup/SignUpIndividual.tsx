@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { LuPhone } from "react-icons/lu";
+
 const SignUpIndividual = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const modalRef = useRef<HTMLDivElement | null>(null);
 
-  const handleClickOutside =
-    (event: MouseEvent) => {
-      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
+  const handleClickOutside = (event: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
 
   useEffect(() => {
     const listener = (event: MouseEvent) => handleClickOutside(event);
@@ -224,12 +224,17 @@ const SignUpIndividual = () => {
                     </div>
                     <p className="font-inter font-normal text-[10px] md:text-sm 2xl:text-lg tracking-[0%] text-[#c7c6c6]">
                       I agree to the{" "}
-                      <Link to='/termsandconditions' className="underline">Terms & Conditions</Link> and{" "}
-                      <Link to='/privacy-policy' className="underline">Privacy Policy.</Link>
+                      <Link to="/termsandconditions" className="underline">
+                        Terms & Conditions
+                      </Link>{" "}
+                      and{" "}
+                      <Link to="/privacy-policy" className="underline">
+                        Privacy Policy.
+                      </Link>
                     </p>
                   </div>
 
-                  <Link to ="/dashboard">
+                  <Link to="/dashboard">
                     <button className="w-full rounded-full bg-[#a324f2] py-[17px] px-[80px] md:px-[128px]">
                       <span className="font-montserrat font-semibold text-sm 2xl:text-base text-[#ffffff]">
                         Sign Up

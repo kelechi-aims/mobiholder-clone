@@ -8,18 +8,18 @@ const Navbar = () => {
   const location = useLocation();
 
   // Detects clicks outside and close dropdown
-  const handleClickOutside =
-    (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false);
-      }
+  const handleClickOutside = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setIsMenuOpen(false);
     }
-  ;
-
+  };
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside as EventListener);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside as EventListener);
+      document.removeEventListener(
+        "mousedown",
+        handleClickOutside as EventListener
+      );
     };
   }, [handleClickOutside]);
 
@@ -71,49 +71,50 @@ const Navbar = () => {
               Login
             </button>
           </Link>
-          {/* <Link to="/signup">
+          <Link to="/signup">
             <button className="py-[3px] px-[47px] lg:px-[30px] border rounded-full border-purple font-semibold text-base  2xl:text-base text-center text-white bg-purple">
               Sign up
             </button>
-          </Link> */}
+          </Link>
         </div>
 
         {/* Mobile & Tablet Menu */}
         {isMenuOpen && (
-          <div 
+          <div
             ref={menuRef}
-            className="lg:hidden fixed top-0 right-0 z-[9999] h-screen w-60 bg-white shadow-lg transition-transform duration-300">
+            className="lg:hidden fixed top-0 right-0 z-[9999] h-screen w-60 bg-white shadow-lg transition-transform duration-300"
+          >
             <div className="flex flex-col mt-16 space-y-4">
-                {navLinks.map((link, index) => (
-                  <Link
-                    key={index}
-                    to={link.path}
-                    className="block px-6 py-3 text-gray-800 hover:bg-purple"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-              <div className="mt-auto flex flex-col space-y-4 px-6 mb-6">
-                <Link to="/login" onClick={() => setIsMenuOpen(false)}>
-                  <button
-                    className={`w-full py-3 text-left text-gray-800 hover:bg-purple`}
-                  >
-                    Login
-                  </button>
+              {navLinks.map((link, index) => (
+                <Link
+                  key={index}
+                  to={link.path}
+                  className="block px-6 py-3 text-gray-800 hover:bg-purple"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
                 </Link>
-                {/* <Link to="/signup" onClick={() => setIsMenuOpen(false)}>
-                  <button className="w-full py-3 text-left text-gray-800 hover:bg-purple">
-                    Sign up
-                  </button>
-                </Link> */}
-            </div>  
+              ))}
+            </div>
+            <div className="mt-auto flex flex-col space-y-4 px-6 mb-6">
+              <Link to="/login" onClick={() => setIsMenuOpen(false)}>
+                <button
+                  className={`w-full py-3 text-left text-gray-800 hover:bg-purple`}
+                >
+                  Login
+                </button>
+              </Link>
+              <Link to="/signup" onClick={() => setIsMenuOpen(false)}>
+                <button className="w-full py-3 text-left text-gray-800 hover:bg-purple">
+                  Sign up
+                </button>
+              </Link>
+            </div>
           </div>
         )}
 
         {/* Hamburger Menu for Small Screens */}
-        <div className="lg:hidden relative" >
+        <div className="lg:hidden relative">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white focus:outline-none text-xl"
@@ -135,8 +136,6 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-
-        
       </div>
     </div>
   );

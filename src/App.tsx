@@ -12,11 +12,10 @@ import SignUp from "./pages/signup/SignUp";
 import SignUpIndividual from "./pages/signup/SignUpIndividual";
 import SignUpOrganization from "./pages/signup/SignUpOrganization";
 import ResetPassword from "./pages/signup/ResetPassword";
-import {LargeScreenSideMenu } from "./pages/Dashboards/Individual/SideMenu/LargeScreenSideMenu";
-import Dashboard from "./pages/Dashboards/Individual/Dashboard/Dashboard";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import TermsCondition from "./pages/legal/TermsCondition";
-
+import Dashboard from "./pages/dashboards/Individual/Dashboard";
+import { LargeScreenSideMenu } from "./pages/dashboards/components/SideMenu/LargeScreenSideMenu";
 const MainLayout = () => {
   return (
     <div className="relative">
@@ -40,11 +39,13 @@ const MinLayout = () => {
 const AuthLayout = () => {
   return (
     <div className="bg-[#0d0d0d]">
-      <div className="container p-5 w-full flex gap-2">
-        <div className="w-[22%]">
+      <div className="container mx-auto p-4 w-full grid lg:grid-col-2 gap-2">
+        <div className="lg:w-[18%] lg:fixed hidden lg:block">
           <LargeScreenSideMenu />
         </div>
-        <Outlet />
+        <div className="lg:ml-[23%] xl:ml-[20%]">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
