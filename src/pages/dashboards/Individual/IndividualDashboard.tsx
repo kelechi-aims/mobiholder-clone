@@ -3,10 +3,10 @@ import FirstComponent from "../components/FirstComponent";
 import SecondComponent from "../components/SecondComponent";
 import ThirdComponent from "../components/ThirdComponent";
 
-const Dashboard = () => {
+const IndividualDashboard = () => {
   return (
     <div className="w-full">
-      <FirstComponent />
+      <FirstComponent role="individual" />
       <SecondComponent />
       <DashboardWidgets />
       <ThirdComponent />
@@ -14,4 +14,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default IndividualDashboard;

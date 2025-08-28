@@ -101,90 +101,34 @@ export const upcomingEvents: UpcomingEvent[] = [
   { title: "Google Event", logo: "/images/google(2).png", date: "30/08/2023" },
 ];
 
-//sidebar menu (individual)
-export const individualMenu = [
-  {
-    name: "Dashboard",
-    path: "/dashboard",
-    icon: <CgHome />,
-  },
-  {
-    name: "Membership",
-    path: "membership",
-    icon: <RiFileCheckLine />,
-  },
-  {
-    name: "Subscription",
-    path: "/subscription",
-    icon: <MdOutlineSubscriptions />,
-  },
-  {
-    name: "ID Cards",
-    path: "/id-cards",
-    icon: <GoClock />,
-  },
-  {
-    name: "Event",
-    path: "/event",
-    icon: <FiCreditCard />,
-  },
-  {
-    name: "Verify",
-    path: "/verify",
-    icon: <LuBell />,
-  },
-  {
-    name: "Notification",
-    path: "/notification",
-    icon: <LuBell />,
-  },
-  {
-    name: "Settings",
-    path: "/settings",
-    icon: <IoSettingsOutline />,
-  },
-];
-
-//sidebar menu (organisation)
-export const organisationMenu = [
-  {
-    name: "Dashboard",
-    path: "/dashboard",
-    icon: <CgHome />,
-  },
-  {
-    name: "Membership",
-    path: "membership",
-    icon: <RiFileCheckLine />,
-  },
-  {
-    name: "Subscription",
-    path: "/subscription",
-    icon: <MdOutlineSubscriptions />,
-  },
-  {
-    name: "ID Cards",
-    path: "/id-cards",
-    icon: <GoClock />,
-  },
-  {
-    name: "Event",
-    path: "/event",
-    icon: <FiCreditCard />,
-  },
-  {
-    name: "Verify",
-    path: "/verify",
-    icon: <LuBell />,
-  },
-  {
-    name: "Notification",
-    path: "/notification",
-    icon: <LuBell />,
-  },
-  {
-    name: "Settings",
-    path: "/settings",
-    icon: <IoSettingsOutline />,
-  },
-];
+//sidebar menu
+export const menuConfig = {
+  individual: [
+    { name: "Dashboard", path: "/dashboard", icon: <CgHome /> },
+    { name: "Membership", path: "membership", icon: <RiFileCheckLine /> },
+    {
+      name: "Subscription",
+      path: "/subscription",
+      icon: <MdOutlineSubscriptions />,
+    },
+    { name: "ID Cards", path: "/id-cards", icon: <GoClock /> },
+    { name: "Event", path: "/event", icon: <FiCreditCard /> },
+    { name: "Verify", path: "/verify", icon: <LuBell /> },
+    { name: "Notification", path: "/notification", icon: <LuBell /> },
+    { name: "Settings", path: "/settings", icon: <IoSettingsOutline /> },
+  ],
+  organisation: [
+    { name: "Dashboard", path: "/dashboard", icon: <CgHome /> },
+    { name: "Membership", path: "membership", icon: <RiFileCheckLine /> },
+    {
+      name: "Subscription",
+      path: "/subscription",
+      icon: <MdOutlineSubscriptions />,
+    },
+    { name: "ID Cards", path: "/id-cards", icon: <GoClock /> },
+    { name: "Event", path: "/event", icon: <FiCreditCard /> },
+    { name: "Verify", path: "/verify", icon: <LuBell /> },
+    { name: "Notification", path: "/notification", icon: <LuBell /> },
+    { name: "Settings", path: "/settings", icon: <IoSettingsOutline /> },
+  ],
+};

@@ -1,58 +1,35 @@
-import { Link } from "react-router-dom";
-import { CgHome } from "react-icons/cg";
-import { RiFileCheckLine } from "react-icons/ri";
-import { GoClock } from "react-icons/go";
-import { FiCreditCard } from "react-icons/fi";
-import { LuBell } from "react-icons/lu";
-import { IoSettingsOutline } from "react-icons/io5";
+import { Link, useLocation } from "react-router-dom";
 import { AiOutlineLogout } from "react-icons/ai";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiSun } from "react-icons/fi";
 import { IoMoonOutline } from "react-icons/io5";
-import { MdOutlineSubscriptions } from "react-icons/md";
-
-export const menu = [
-  {
-    name: "Dashboard",
-    icon: <CgHome />,
-  },
-  {
-    name: "Membership",
-    icon: <RiFileCheckLine />,
-  },
-  {
-    name: "Subscription",
-    icon: <MdOutlineSubscriptions />,
-  },
-  {
-    name: "ID Cards",
-    icon: <GoClock />,
-  },
-  {
-    name: "Event",
-    icon: <FiCreditCard />,
-  },
-  {
-    name: "Verify",
-    icon: <LuBell />,
-  },
-  {
-    name: "Notification",
-    icon: <LuBell />,
-  },
-  {
-    name: "Settings",
-    icon: <IoSettingsOutline />,
-  },
-];
+import { menuConfig } from "../../../../data1";
 
 export const MobileScreenSideMenu = () => {};
-export const LargeScreenSideMenu = () => {
-  const [active, setActive] = useState("Dashboard");
+
+export const LargeScreenSideMenu = ({
+  role,
+}: {
+  role: "individual" | "organisation";
+}) => {
+  const location = useLocation();
+  const menus = menuConfig[role] || [];
+
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const currentMenu = menus.find((item) =>
+      location.pathname.startsWith(item.path)
+    );
+    if (currentMenu) {
+      setActive(currentMenu.name);
+    }
+  }, [location.pathname, menus]);
 
   return (
     <div className="rounded-[14px] bg-[#15171e] opacity-100">
       <div className="mx-4">
+        {/* Logo */}
         <div className="py-7">
           <Link to="/">
             <img
@@ -62,16 +39,19 @@ export const LargeScreenSideMenu = () => {
             />
           </Link>
         </div>
+
         <hr className="border-t-1 border-[#212222]" />
+
+        {/* Menu Items */}
         <div className="h-[calc(100vh-350px)] overflow-y-auto scrollbar-thin scrollbar-track-[#0f111a] scrollbar-thumb-[#161a27] scrollbar-thumb-rounded-[28px] scrollbar-track-rounded-[28px]">
           <ul className="py-4">
-            {menu.map((item) => (
-              <>
+            {menus.map((item) => (
+              <li key={item.name}>
                 {item.name === "Settings" && (
                   <hr className="pt-10 border-t-1 border-[#212222]" />
                 )}
-                <li
-                  key={item.name}
+                <Link
+                  to={item.path}
                   className={`py-4 flex content-center font-inter font-normal text-sm items-center gap-4 ${
                     item.name === "Settings"
                       ? "px-0 text-[#ffffff]"
@@ -85,11 +65,12 @@ export const LargeScreenSideMenu = () => {
                 >
                   <span>{item.icon}</span>
                   <span>{item.name}</span>
-                </li>
-              </>
+                </Link>
+              </li>
             ))}
           </ul>
 
+          {/* Logout */}
           <div className="pb-10 flex content-center font-inter font-normal text-sm items-center text-[#f54b64] gap-4 ">
             <AiOutlineLogout />
             <span>Logout</span>
@@ -97,9 +78,11 @@ export const LargeScreenSideMenu = () => {
         </div>
 
         <hr className="pb-6 border-t-1 border-[#212222]" />
+
+        {/* Theme toggle */}
         <div className="pt-6 pb-10">
           <img
-            src="images/dashboard-img1.png"
+            src="/images/dashboard-img1.png"
             alt="dashboard-id"
             className="mb-4"
           />

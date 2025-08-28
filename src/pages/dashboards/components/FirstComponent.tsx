@@ -5,7 +5,15 @@ import { IoNotificationsOutline } from "react-icons/io5";
 
 import { BsCopy } from "react-icons/bs";
 
-const FirstComponent = () => {
+type FirstComponentProps = {
+  role: "individual" | "organisation";
+};
+
+const FirstComponent = ({ role }: FirstComponentProps) => {
+  // dynamic styles for the profile image
+  const profileImageClass =
+    role === "individual" ? "rounded-full" : "rounded-[14px]";
+
   return (
     <div className="w-full">
       <div className="flex flex-col md:flex-row gap-5 xl:justify-between items-center mb-5">
@@ -38,17 +46,17 @@ const FirstComponent = () => {
               My Profile
             </p>
             <img
-              src="images/dashboard_profile_pic.png"
+              src="/images/dashboard_profile_pic.png"
               alt="user_profile_picture"
-              className="w-[34px] h-[34px] border-[3px] border-[##212121] rounded-full"
+              className={`w-[34px] h-[34px] border-[3px] border-[#212121] ${profileImageClass}`}
             />
           </div>
           <div className="flex justify-start items-center gap-5">
             <div>
               <img
-                src="images/dashboard_profile_pic.png"
+                src="/images/dashboard_profile_pic.png"
                 alt="user profile picture"
-                className="w-[50px] xl:w-[83px] h-[50px] xl:h-[83px] border-[3px] border-[#f5f5f5] rounded-full mx-auto mt-5"
+                className={`w-[50px] xl:w-[83px] h-[50px] xl:h-[83px] border-[3px] border-[#f5f5f5] ${profileImageClass} mx-auto mt-5`}
               />
             </div>
             <div>
@@ -59,7 +67,9 @@ const FirstComponent = () => {
                 </span>
               </p>
               <p className="font-inter font-regular text-xs text-[#7f7f7f]">
-                Individual Account
+                {role === "individual"
+                  ? "Individual Account"
+                  : "Organisation Account"}
               </p>
               <p className="flex gap-1 items-center font-inter font-bold text-[13px] text-[#4950ca]">
                 ID : 1213 1241 5523{" "}

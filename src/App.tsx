@@ -14,8 +14,9 @@ import SignUpOrganization from "./pages/signup/SignUpOrganization";
 import ResetPassword from "./pages/signup/ResetPassword";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import TermsCondition from "./pages/legal/TermsCondition";
-import Dashboard from "./pages/dashboards/Individual/Dashboard";
 import { LargeScreenSideMenu } from "./pages/dashboards/components/SideMenu/LargeScreenSideMenu";
+import IndividualDashboard from "./pages/dashboards/Individual/IndividualDashboard";
+import OrganisationDashboard from "./pages/dashboards/organisation/OrganisationDashboard";
 const MainLayout = () => {
   return (
     <div className="relative">
@@ -36,12 +37,12 @@ const MinLayout = () => {
   );
 };
 
-const AuthLayout = () => {
+const AuthLayout = ({ role }: { role: "individual" | "organisation" }) => {
   return (
     <div className="bg-[#0d0d0d]">
       <div className="container mx-auto p-4 w-full grid lg:grid-col-2 gap-2">
         <div className="lg:w-[18%] lg:fixed hidden lg:block">
-          <LargeScreenSideMenu />
+          <LargeScreenSideMenu role={role} />
         </div>
         <div className="lg:ml-[23%] xl:ml-[20%]">
           <Outlet />
@@ -78,9 +79,14 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/",
-    element: <AuthLayout />,
-    children: [{ path: "/dashboard", element: <Dashboard /> }],
+    path: "/individual",
+    element: <AuthLayout role="individual" />,
+    children: [{ path: "dashboard", element: <IndividualDashboard /> }],
+  },
+  {
+    path: "/organisation",
+    element: <AuthLayout role="organisation" />,
+    children: [{ path: "dashboard", element: <OrganisationDashboard /> }],
   },
 ]);
 
