@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { DashboardTable } from "./DashboardWidgets";
-import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
+import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from "recharts";
 import { orgUpcomingEvents } from "../../../data1";
 
 const data = [
