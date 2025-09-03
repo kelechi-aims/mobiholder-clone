@@ -6,7 +6,7 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import { BsCopy } from "react-icons/bs";
 
 type FirstComponentProps = {
-  role: "individual" | "organisation";
+  role: "individual" | "organization";
 };
 
 const FirstComponent = ({ role }: FirstComponentProps) => {
@@ -69,7 +69,7 @@ const FirstComponent = ({ role }: FirstComponentProps) => {
               <p className="font-inter font-regular text-xs text-[#7f7f7f]">
                 {role === "individual"
                   ? "Individual Account"
-                  : "Organisation Account"}
+                  : "Organization Account"}
               </p>
               <p className="flex gap-1 items-center font-inter font-bold text-[13px] text-[#4950ca]">
                 ID : 1213 1241 5523{" "}

@@ -52,8 +52,8 @@ const Subscription = () => {
               barSize={7}
               margin={{ top: 5, right: 10, left: 0, bottom: 1 }}
             >
-              <XAxis dataKey="month" fontSize={8} stroke="#0b1739" />
-              <YAxis fontSize={8} stroke="#0b1739" />
+              <XAxis dataKey="month" fontSize={8} stroke="#aeb9e1" />
+              <YAxis fontSize={8} stroke="#aeb9e1" />
               <Tooltip />
               <CartesianGrid strokeDasharray="3 3" stroke="#0b1739" />
               <Bar dataKey="value" fill="#a324f2" radius={[3, 3, 0, 0]}></Bar>

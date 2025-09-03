@@ -1,9 +1,9 @@
-import { SlCalender } from "react-icons/sl";
-import { FaUsersLine } from "react-icons/fa6";
-import { PiCheckSquare } from "react-icons/pi";
-import { BsCreditCard } from "react-icons/bs";
 import { FC } from "react";
-import { StatCardProps, stats } from "../../../data1";
+import { StatCardProps } from "../../../data1";
+
+interface SecondComponentProps {
+  stats: StatCardProps[];
+}
 
 const StatCard: FC<StatCardProps> = ({
   count,
@@ -27,7 +27,7 @@ const StatCard: FC<StatCardProps> = ({
   );
 };
 
-const SecondComponent: FC = () => {
+const SecondComponent: FC<SecondComponentProps> = ({ stats }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {stats.map((stat) => (

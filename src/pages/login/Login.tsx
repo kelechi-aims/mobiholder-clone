@@ -78,11 +78,13 @@ const Login = () => {
 
                   <div className="flex justify-end mb-4">
                     <p className="font-inter font-normal text-sm 2xl:text-lg tracking-[3%] underline text-[#242ef2]">
-                      <Link to='/resetpassword' className="underline">Forget Password</Link>
+                      <Link to="/resetpassword" className="underline">
+                        Forget Password
+                      </Link>
                     </p>
                   </div>
 
-                  <Link to='/dashboard'>
+                  <Link to="/organisation/dashboard">
                     <button className="w-full rounded-full bg-[#a324f2] py-[17px] px-[128px]">
                       <span className="font-montserrat font-semibold text-sm 2xl:text-base text-[#ffffff]">
                         Login

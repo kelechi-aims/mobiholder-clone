@@ -1,11 +1,19 @@
+import { OrganisationStats, orgMembers } from "../../../data1";
+import { DashboardTable } from "../components/DashboardWidgets";
 import FirstComponent from "../components/FirstComponent";
+import OrgFourthComponent from "../components/OrgFourthComponent";
+import OrgThirdComponent from "../components/OrgThirdComponent";
+import SecondComponent from "../components/SecondComponent";
 
-function OrganisationDashboard() {
+const OrganisationDashboard = () => {
   return (
     <div>
-      <FirstComponent role="organisation" />
+      <FirstComponent role="organization" />
+      <SecondComponent stats={OrganisationStats} />
+      <OrgThirdComponent />
+      <OrgFourthComponent />
     </div>
   );
-}
+};
 
 export default OrganisationDashboard;

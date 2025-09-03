@@ -37,7 +37,7 @@ const MinLayout = () => {
   );
 };
 
-const AuthLayout = ({ role }: { role: "individual" | "organisation" }) => {
+const AuthLayout = ({ role }: { role: "individual" | "organization" }) => {
   return (
     <div className="bg-[#0d0d0d]">
       <div className="container mx-auto p-4 w-full grid lg:grid-col-2 gap-2">
@@ -84,8 +84,8 @@ const router = createBrowserRouter([
     children: [{ path: "dashboard", element: <IndividualDashboard /> }],
   },
   {
-    path: "/organisation",
-    element: <AuthLayout role="organisation" />,
+    path: "/organization",
+    element: <AuthLayout role="organization" />,
     children: [{ path: "dashboard", element: <OrganisationDashboard /> }],
   },
 ]);

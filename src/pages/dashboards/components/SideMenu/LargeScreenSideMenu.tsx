@@ -10,7 +10,7 @@ export const MobileScreenSideMenu = () => {};
 export const LargeScreenSideMenu = ({
   role,
 }: {
-  role: "individual" | "organisation";
+  role: "individual" | "organization";
 }) => {
   const location = useLocation();
   const menus = menuConfig[role] || [];
