@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+@theme inline {
+  /* Breakpoints from old screens */
+  --breakpoint-xls: 1366px;
+  --breakpoint-xll: 1440px;
+
+  /* Fonts */
+  --font-inter: "Inter", sans-serif;
+  --font-grifter: "Grifter", "Bebas Neue", sans-serif;
+  --font-rubik: "Rubik", serif;
+  --font-roboto: "Roboto", serif;
+  --font-mulish: "Mulish", serif;
+  --font-unbounded: "Unbounded", serif;
+  --font-montserrat: "Montserrat", serif;
+
+  /* Colors */
+  --color-purple: #a324f2;
+
+  /* Shadows */
+  --shadow-custom-inset: inset 0px 0px 1px 2px #a324f226;
+  --shadow-about-sh: 0px 4px 28px 0px rgba(0, 0, 0, 0.15);
+
+  /* Optional if you want Next font variables */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Custom background-image utilities */
+@utility bg-nav-gradient {
+  background-image: linear-gradient(
+    to right,
+    rgba(1, 12, 16, 0.42),
+    rgba(1, 21, 26, 0.4)
+  );
+}
+
+@utility bg-about-text-gradient {
+  background-image: linear-gradient(93.98deg, #a324f2 0%, #242ef2 97.91%);
+}
+
+@utility bg-feature-border {
+  background-image: linear-gradient(
+    100.05deg,
+    rgba(255, 255, 255, 0.09) 2.16%,
+    rgba(255, 255, 255, 0) 101.73%
+  );
+}
+
+@utility bg-feature-card {
+  background-image: linear-gradient(
+    137.34deg,
+    rgba(27, 28, 54, 0.16) 23.98%,
+    rgba(112, 113, 122, 0.16) 65.73%
+  );
+}
+
+@utility bg-feat-card-bdr {
+  background-image: linear-gradient(
+    81.07deg,
+    #2c2d47 53.33%,
+    rgba(68, 74, 226, 0.05) 93.73%
+  );
+}
+
+@utility bg-cta-text {
+  background-image: linear-gradient(93.98deg, #dfd9fe 0%, #5d81ed 97.91%);
+}
+
+@utility bg-news-text {
+  background-image: linear-gradient(93.98deg, #dfd9fe 0%, #5d81ed 97.91%);
+}
+
+@utility bg-news-bdr {
+  background-image: linear-gradient(92.59deg, #eaf85b 0%, #7995fb 100%);
+}
+
+@utility bg-news-logo {
+  background-image: linear-gradient(90deg, #020d11 0%, rgba(2, 13, 17, 0) 100%);
+}
+
+@utility bg-news-logo2 {
+  background-image: linear-gradient(
+    -90deg,
+    #020d11 0%,
+    rgba(2, 13, 17, 0) 100%
+  );
+}
+
+@utility bg-pricing-txt {
+  background-image: linear-gradient(180deg, #ffffff 30%, #999999 100%);
+}
+
+@utility bg-pricing-card-bdr {
+  background-image: linear-gradient(
+    180deg,
+    rgba(36, 60, 242, 0.5) 0%,
+    rgba(36, 57, 242, 0.5) 50%,
+    rgba(36, 46, 242, 0.5) 100%
+  );
+}
+
+@utility bg-pricing-card-bg {
+  background-image: linear-gradient(
+    180deg,
+    rgba(43, 255, 255, 0.12) 0%,
+    rgba(43, 255, 255, 0.04) 50%,
+    rgba(43, 255, 255, 0.07) 100%
+  );
+}
+
+@utility bg-pricing-btn {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@utility bg-pricing-chk {
+  background-image: linear-gradient(
+    180deg,
+    #2bffff 0%,
+    rgba(43, 255, 255, 0.41) 100%
+  );
+}
+
+@utility bg-contactus-bg {
+  background-image: linear-gradient(171.36deg, #17209b 6.6%, #1825a1 63.68%);
+}
+
+@utility bg-signup-individual-bg {
+  background-image: linear-gradient(82.88deg, #29163d 72.05%, #a33aa0 124.35%);
+}
+
+@utility bg-signup-Organization-bg {
+  background-image: linear-gradient(82.88deg, #16183d 72.05%, #3c3aa3 124.35%);
+}
+
+@utility bg-signup-bdr {
+  background-image: linear-gradient(278.85deg, #2e2f36 13%, #85889c 93.28%);
+}
+
+/* Backdrop blur utility */
+@utility backdrop-blur-nav-blur {
+  backdrop-filter: blur(53.8px);
+}
